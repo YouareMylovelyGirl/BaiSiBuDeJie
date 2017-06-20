@@ -11,6 +11,7 @@
 #import "YGMeViewController.h"
 #import "YGNewViewController.h"
 #import "YGFriendTrendViewController.h"
+#import "YGNavigationController.h"
 
 @interface TMCommonTabBarController ()
 
@@ -43,7 +44,7 @@
      */
     
     //第一个控制器
-    UINavigationController *essenveNav = [[UINavigationController alloc] initWithRootViewController:[[YGEssenceViewController alloc] init]];
+    YGNavigationController *essenveNav = [[YGNavigationController alloc] initWithRootViewController:[[YGEssenceViewController alloc] init]];
     
     [self tabBarItemWithControllerIndes:0 controller:essenveNav title:@"精华" normalImageName:@"tabBar_essence_icon" selectedImageName:@"tabBar_essence_click_icon" tabBarItemType:kTMBaseTabBarItemNormal withCustomItemBlock:nil];
     
@@ -51,7 +52,7 @@
     [self configColorAndFont];
     
     //第二个控制器
-    UINavigationController *newNav = [[UINavigationController alloc] initWithRootViewController:[[YGNewViewController alloc] init]];
+    YGNavigationController *newNav = [[YGNavigationController alloc] initWithRootViewController:[[YGNewViewController alloc] init]];
     [self tabBarItemWithControllerIndes:1 controller:newNav title:@"新帖" normalImageName:@"tabBar_new_icon" selectedImageName:@"tabBar_new_click_icon" tabBarItemType:kTMBaseTabBarItemNormal withCustomItemBlock:nil];
     [self configColorAndFont];
     
@@ -62,12 +63,12 @@
     [self configColorAndFont];
     
     //第三个控制器
-    UINavigationController *friendNav = [[UINavigationController alloc] initWithRootViewController:[[YGFriendTrendViewController alloc] init]];
+    YGNavigationController *friendNav = [[YGNavigationController alloc] initWithRootViewController:[[YGFriendTrendViewController alloc] init]];
     [self tabBarItemWithControllerIndes:3 controller:friendNav title:@"关注" normalImageName:@"tabBar_friendTrends_icon" selectedImageName:@"tabBar_friendTrends_click_icon" tabBarItemType:kTMBaseTabBarItemNormal withCustomItemBlock:nil];
     [self configColorAndFont];
     
     //第四个控制器
-    UINavigationController *meNav = [[UINavigationController alloc] initWithRootViewController:[[YGMeViewController alloc] init]];
+    YGNavigationController *meNav = [[YGNavigationController alloc] initWithRootViewController:[[YGMeViewController alloc] init]];
 
     [self tabBarItemWithControllerIndes:4 controller:meNav title:@"我" normalImageName:@"tabBar_me_icon" selectedImageName:@"tabBar_me_click_icon" tabBarItemType:kTMBaseTabBarItemNormal withCustomItemBlock:nil];
     [self configColorAndFont];

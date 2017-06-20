@@ -24,24 +24,23 @@
 
 #pragma mark - 设置导航条
 - (void)setupNavBar {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:[UIImage imageNamed:@"nav_item_game_icon"] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:@"nav_item_game_click_icon"] forState:UIControlStateHighlighted];
-    [btn sizeToFit];
-    [btn addTarget:self action:@selector(game) forControlEvents:UIControlEventTouchUpInside];
+    //快速创建导航条左右item
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemButtonWithNormalImage:[UIImage imageNamed:@"nav_item_game_icon"] hightLightImage:[UIImage imageNamed:@"nav_item_game_click_icon"] target:self action:@selector(game)];
+    //titleView 用来设置 中间图片
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    //设置右边导航条按钮
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemButtonWithNormalImage:[UIImage imageNamed:@"navigationButtonRandom"] hightLightImage:[UIImage imageNamed:@"navigationButtonRandomClick"] target:self action:@selector(random)];
     
-    //如果不用view包一下, tabBarItem点击范围会变大
-    UIView *contentView = [[UIView alloc] initWithFrame:btn.bounds];
-    [contentView addSubview:btn];
-    
-    
-    UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:contentView];
-    self.navigationItem.leftBarButtonItem = leftBarButton;
 }
-
+//左边游戏
 - (void)game {
     NSLog(@"%s", __func__);
 }
+//右边随机
+- (void)random {
+    NSLog(@"%s", __func__);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

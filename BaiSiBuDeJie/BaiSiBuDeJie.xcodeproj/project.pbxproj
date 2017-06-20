@@ -27,6 +27,8 @@
 		A4C42A351EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A301EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m */; };
 		A4C42A361EF8EB6C00D2C2A5 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A321EF8EB6C00D2C2A5 /* UIView+HUD.m */; };
 		A4C42A481EF8F19900D2C2A5 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A451EF8F19900D2C2A5 /* BaseNetManager.m */; };
+		A4C42A4E1EF9013D00D2C2A5 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A4D1EF9013D00D2C2A5 /* UIBarButtonItem+item.m */; };
+		A4C42A511EF906BA00D2C2A5 /* YGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A501EF906BA00D2C2A5 /* YGNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,10 @@
 		A4C42A451EF8F19900D2C2A5 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
 		A4C42A4A1EF8F1F500D2C2A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../../PrefixHeader.pch; sourceTree = "<group>"; };
 		A4C42A4B1EF8F24C00D2C2A5 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Const.h; path = ../../Const.h; sourceTree = "<group>"; };
+		A4C42A4C1EF9013D00D2C2A5 /* UIBarButtonItem+item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+item.h"; sourceTree = "<group>"; };
+		A4C42A4D1EF9013D00D2C2A5 /* UIBarButtonItem+item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+item.m"; sourceTree = "<group>"; };
+		A4C42A4F1EF906BA00D2C2A5 /* YGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNavigationController.h; sourceTree = "<group>"; };
+		A4C42A501EF906BA00D2C2A5 /* YGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGNavigationController.m; sourceTree = "<group>"; };
 		EACFFD5D0983116D47B30489 /* Pods-BaiSiBuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +234,8 @@
 			children = (
 				A4C42A131EF8E07100D2C2A5 /* TMCommonTabBarController.h */,
 				A4C42A141EF8E07100D2C2A5 /* TMCommonTabBarController.m */,
+				A4C42A4F1EF906BA00D2C2A5 /* YGNavigationController.h */,
+				A4C42A501EF906BA00D2C2A5 /* YGNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -373,6 +381,8 @@
 				A4C42A301EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m */,
 				A4C42A311EF8EB6C00D2C2A5 /* UIView+HUD.h */,
 				A4C42A321EF8EB6C00D2C2A5 /* UIView+HUD.m */,
+				A4C42A4C1EF9013D00D2C2A5 /* UIBarButtonItem+item.h */,
+				A4C42A4D1EF9013D00D2C2A5 /* UIBarButtonItem+item.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -515,11 +525,13 @@
 				A4C42A481EF8F19900D2C2A5 /* BaseNetManager.m in Sources */,
 				A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */,
 				A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */,
+				A4C42A511EF906BA00D2C2A5 /* YGNavigationController.m in Sources */,
 				A4C42A1B1EF8E2C200D2C2A5 /* YGEssenceViewController.m in Sources */,
 				A4C42A181EF8E07100D2C2A5 /* TMCommonTabBarController.m in Sources */,
 				A4C42A331EF8EB6C00D2C2A5 /* NSObject+Parse.m in Sources */,
 				A43A29791EF8DE26002206A6 /* main.m in Sources */,
 				A4C42A1E1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m in Sources */,
+				A4C42A4E1EF9013D00D2C2A5 /* UIBarButtonItem+item.m in Sources */,
 				A4C42A341EF8EB6C00D2C2A5 /* NSString+YG.m in Sources */,
 				A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */,
 				A4C42A281EF8E32E00D2C2A5 /* YGNewViewController.m in Sources */,
