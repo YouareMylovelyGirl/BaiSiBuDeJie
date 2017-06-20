@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YGADViewController">
+            <connections>
+                <outlet property="adContentView" destination="bew-e6-3f7" id="e0r-yU-9dD"/>
+                <outlet property="launchImageView" destination="Ojo-Ro-DtU" id="yML-OT-wSj"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Qr7-mm-xpR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ojo-Ro-DtU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bew-e6-3f7" userLabel="广告占位视图">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3D-HY-Ms6">
+                    <rect key="frame" x="281" y="30" width="74" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.39992958690987124" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="  跳过  (3)  ">
+                        <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bew-e6-3f7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="15p-va-6cd"/>
+                <constraint firstItem="bew-e6-3f7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9ln-dI-S3b"/>
+                <constraint firstAttribute="trailing" secondItem="Ojo-Ro-DtU" secondAttribute="trailing" id="FcE-31-tav"/>
+                <constraint firstAttribute="trailing" secondItem="i3D-HY-Ms6" secondAttribute="trailing" constant="20" id="NLr-oY-AUV"/>
+                <constraint firstItem="Ojo-Ro-DtU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Pl3-O7-9L4"/>
+                <constraint firstAttribute="bottom" secondItem="bew-e6-3f7" secondAttribute="bottom" id="QdR-Iv-hDx"/>
+                <constraint firstItem="i3D-HY-Ms6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="Vs3-zo-6x0"/>
+                <constraint firstAttribute="bottom" secondItem="Ojo-Ro-DtU" secondAttribute="bottom" id="kQJ-be-C8G"/>
+                <constraint firstAttribute="trailing" secondItem="bew-e6-3f7" secondAttribute="trailing" id="t6S-Vk-7im"/>
+                <constraint firstItem="Ojo-Ro-DtU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vB2-is-Eln"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

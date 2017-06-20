@@ -35,7 +35,7 @@
 #import <UITableView+FDTemplateLayoutCell.h>
 #import <HcdCachePlayer.h>
 
-
+#import "MacroFile.h"
 
 #import "NSString+YG.h"
 #endif /* PrefixHeader_pch */

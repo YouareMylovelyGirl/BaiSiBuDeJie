@@ -14,6 +14,8 @@
 		A43A29771EF8DE26002206A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43A29731EF8DE26002206A6 /* Assets.xcassets */; };
 		A43A29791EF8DE26002206A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A29751EF8DE26002206A6 /* main.m */; };
 		A43A297B1EF8DE49002206A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A43A297A1EF8DE49002206A6 /* Info.plist */; };
+		A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097581EF948CF00AB6503 /* YGADViewController.m */; };
+		A450975D1EF949EF00AB6503 /* YGADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450975C1EF949EF00AB6503 /* YGADViewController.xib */; };
 		A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */; };
 		A4C42A161EF8E07100D2C2A5 /* TMBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A101EF8E07100D2C2A5 /* TMBaseTabBarController.m */; };
 		A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A121EF8E07100D2C2A5 /* TMBaseTabBarItems.m */; };
@@ -43,6 +45,10 @@
 		A43A29731EF8DE26002206A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Classes/Other/Assets.xcassets; sourceTree = "<group>"; };
 		A43A29751EF8DE26002206A6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/Other/main.m; sourceTree = "<group>"; };
 		A43A297A1EF8DE49002206A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A45097571EF948CF00AB6503 /* YGADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGADViewController.h; sourceTree = "<group>"; };
+		A45097581EF948CF00AB6503 /* YGADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGADViewController.m; sourceTree = "<group>"; };
+		A450975C1EF949EF00AB6503 /* YGADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGADViewController.xib; sourceTree = "<group>"; };
+		A450975E1EF94EB900AB6503 /* MacroFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroFile.h; sourceTree = "<group>"; };
 		A4C42A0D1EF8E07100D2C2A5 /* TMBaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBaseTabBar.h; sourceTree = "<group>"; };
 		A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMBaseTabBar.m; sourceTree = "<group>"; };
 		A4C42A0F1EF8E07100D2C2A5 /* TMBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBaseTabBarController.h; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 			children = (
 				A43A29711EF8DE26002206A6 /* AppDelegate.h */,
 				A43A29721EF8DE26002206A6 /* AppDelegate.m */,
+				A45097531EF946F400AB6503 /* AD */,
 				A43A29501EF8D8A6002206A6 /* Main */,
 				A43A29481EF8D8A6002206A6 /* Essence */,
 				A43A294C1EF8D8A6002206A6 /* FriendTrend */,
@@ -310,10 +317,45 @@
 		A43A29701EF8DE26002206A6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A450975E1EF94EB900AB6503 /* MacroFile.h */,
 				A4C42A4B1EF8F24C00D2C2A5 /* Const.h */,
 				A4C42A4A1EF8F1F500D2C2A5 /* PrefixHeader.pch */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		A45097531EF946F400AB6503 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				A45097541EF946F400AB6503 /* Controller */,
+				A45097551EF946F400AB6503 /* Model */,
+				A45097561EF946F400AB6503 /* View */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
+		A45097541EF946F400AB6503 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A45097571EF948CF00AB6503 /* YGADViewController.h */,
+				A45097581EF948CF00AB6503 /* YGADViewController.m */,
+				A450975C1EF949EF00AB6503 /* YGADViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A45097551EF946F400AB6503 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A45097561EF946F400AB6503 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A4C42A0C1EF8E07100D2C2A5 /* TMBaseTabBar */ = {
@@ -497,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A43963361EF353D400C9903E /* LaunchScreen.storyboard in Resources */,
+				A450975D1EF949EF00AB6503 /* YGADViewController.xib in Resources */,
 				A43A29771EF8DE26002206A6 /* Assets.xcassets in Resources */,
 				A43A297B1EF8DE49002206A6 /* Info.plist in Resources */,
 				A43963311EF353D400C9903E /* Main.storyboard in Resources */,
@@ -560,6 +603,7 @@
 			files = (
 				A4C42A361EF8EB6C00D2C2A5 /* UIView+HUD.m in Sources */,
 				A4C42A481EF8F19900D2C2A5 /* BaseNetManager.m in Sources */,
+				A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */,
 				A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */,
 				A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */,
 				A4C42A511EF906BA00D2C2A5 /* YGNavigationController.m in Sources */,
