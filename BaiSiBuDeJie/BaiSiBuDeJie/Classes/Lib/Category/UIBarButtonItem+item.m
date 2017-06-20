@@ -18,6 +18,7 @@
     
     //如果不用view包一下, tabBarItem点击范围会变大
     UIView *contentView = [[UIView alloc] initWithFrame:btn.bounds];
+    contentView.backgroundColor = [UIColor clearColor];
     [contentView addSubview:btn];
 
     return [[UIBarButtonItem alloc] initWithCustomView:contentView];
@@ -32,6 +33,31 @@
     
     //如果不用view包一下, tabBarItem点击范围会变大
     UIView *contentView = [[UIView alloc] initWithFrame:btn.bounds];
+    contentView.backgroundColor = [UIColor clearColor];
+    [contentView addSubview:btn];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:contentView];
+}
+
++ (instancetype)itemButtonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize normalColor:(UIColor *)normalColor highLightColor:(UIColor *)hightLiightColor target:(id)target action:(SEL)action NormalReturnPic:(UIImage *)normalReturnImage highLightImage:(UIImage *)highLightReturnImage{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:normalColor forState:UIControlStateNormal];
+    [btn setTitleColor:hightLiightColor forState:UIControlStateHighlighted];
+    btn.titleLabel.font = [UIFont systemFontOfSize:fontSize];
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    [btn setImage:normalReturnImage forState:UIControlStateNormal];
+    [btn setImage:highLightReturnImage forState:UIControlStateHighlighted];
+    //这个属性正数是往里面挤
+    btn.contentEdgeInsets = UIEdgeInsetsMake(0, -13, 0, 13);
+    
+    [btn sizeToFit];
+    
+    
+    //如果不用view包一下, tabBarItem点击范围会变大
+    UIView *contentView = [[UIView alloc] initWithFrame:btn.bounds];
+    contentView.backgroundColor = [UIColor clearColor];
     [contentView addSubview:btn];
     
     return [[UIBarButtonItem alloc] initWithCustomView:contentView];

@@ -23,19 +23,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupAllControllers];
     
+    
+    
+    
+    
+}
+
+
+
+- (void)setupAllControllers {
     /*
      如果需要颜色, 需要在每个方法下面都修改
      */
     
-
+    
     //label距离底端为3像素  默认 为0
     self.itemTitleToBottom = 4;
     //标题和图片的间距 在显示位置的基础上 加 减
     self.titleToImageViewMargin = -7;
     //自定义情况下的图片与label之间的距离  在显示位置的基础上 加 减
     self.customImageAndlabelMargin = -5;
-
+    
     //不设置 默认10
     self.fontSize = 10;
     
@@ -69,13 +79,11 @@
     
     //第四个控制器
     YGNavigationController *meNav = [[YGNavigationController alloc] initWithRootViewController:[[YGMeViewController alloc] init]];
-
+    
     [self tabBarItemWithControllerIndes:4 controller:meNav title:@"我" normalImageName:@"tabBar_me_icon" selectedImageName:@"tabBar_me_click_icon" tabBarItemType:kTMBaseTabBarItemNormal withCustomItemBlock:nil];
     [self configColorAndFont];
     
-//    self.selectedIndex = 1;
-    
-    
+    //    self.selectedIndex = 1;
 }
 
 - (void)configColorAndFont {
@@ -93,16 +101,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

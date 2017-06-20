@@ -29,6 +29,7 @@
 		A4C42A481EF8F19900D2C2A5 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A451EF8F19900D2C2A5 /* BaseNetManager.m */; };
 		A4C42A4E1EF9013D00D2C2A5 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A4D1EF9013D00D2C2A5 /* UIBarButtonItem+item.m */; };
 		A4C42A511EF906BA00D2C2A5 /* YGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A501EF906BA00D2C2A5 /* YGNavigationController.m */; };
+		A4C42A581EF90D2400D2C2A5 /* YGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A571EF90D2400D2C2A5 /* YGSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,8 @@
 		A4C42A4D1EF9013D00D2C2A5 /* UIBarButtonItem+item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+item.m"; sourceTree = "<group>"; };
 		A4C42A4F1EF906BA00D2C2A5 /* YGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNavigationController.h; sourceTree = "<group>"; };
 		A4C42A501EF906BA00D2C2A5 /* YGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGNavigationController.m; sourceTree = "<group>"; };
+		A4C42A561EF90D2400D2C2A5 /* YGSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSettingViewController.h; sourceTree = "<group>"; };
+		A4C42A571EF90D2400D2C2A5 /* YGSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSettingViewController.m; sourceTree = "<group>"; };
 		EACFFD5D0983116D47B30489 /* Pods-BaiSiBuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,9 +159,9 @@
 				A43A29481EF8D8A6002206A6 /* Essence */,
 				A43A294C1EF8D8A6002206A6 /* FriendTrend */,
 				A43A29541EF8D8A6002206A6 /* New */,
-				A43A29701EF8DE26002206A6 /* Other */,
 				A43A295E1EF8D8A6002206A6 /* Public */,
 				A4C42A1F1EF8E30400D2C2A5 /* Me */,
+				A43A29701EF8DE26002206A6 /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 		A4C42A1F1EF8E30400D2C2A5 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				A4C42A521EF90CFE00D2C2A5 /* Setting */,
 				A4C42A201EF8E30400D2C2A5 /* Controller */,
 				A4C42A211EF8E30400D2C2A5 /* Model */,
 				A4C42A221EF8E30400D2C2A5 /* View */,
@@ -394,6 +398,39 @@
 				A4C42A451EF8F19900D2C2A5 /* BaseNetManager.m */,
 			);
 			path = NetManager;
+			sourceTree = "<group>";
+		};
+		A4C42A521EF90CFE00D2C2A5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A4C42A531EF90CFE00D2C2A5 /* Controller */,
+				A4C42A541EF90CFE00D2C2A5 /* Model */,
+				A4C42A551EF90CFE00D2C2A5 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A4C42A531EF90CFE00D2C2A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4C42A561EF90D2400D2C2A5 /* YGSettingViewController.h */,
+				A4C42A571EF90D2400D2C2A5 /* YGSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4C42A541EF90CFE00D2C2A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4C42A551EF90CFE00D2C2A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +573,7 @@
 				A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */,
 				A4C42A281EF8E32E00D2C2A5 /* YGNewViewController.m in Sources */,
 				A43A29761EF8DE26002206A6 /* AppDelegate.m in Sources */,
+				A4C42A581EF90D2400D2C2A5 /* YGSettingViewController.m in Sources */,
 				A4C42A161EF8E07100D2C2A5 /* TMBaseTabBarController.m in Sources */,
 				A4C42A351EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m in Sources */,
 			);

@@ -32,4 +32,18 @@
  @return UIBarButtonItem
  */
 + (instancetype)itemButtonWithNormalImage:(UIImage *)normalImage selected:(UIImage *)selectedImage target:(id)target action:(SEL)action;
+
+
+/**
+ 返回为文字时
+
+ @param title 返回标题
+ @param fontSize 字体大小
+ @param normalColor 正常点击颜色
+ @param hightLiightColor 高亮时颜色
+ @param target 代理
+ @param action 方法
+ @return UIBarButtonItem
+ */
++ (instancetype)itemButtonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize normalColor:(UIColor *)normalColor highLightColor:(UIColor *)hightLiightColor target:(id)target action:(SEL)action NormalReturnPic:(UIImage *)normalReturnImage highLightImage:(UIImage *)highLightReturnImage;
 @end

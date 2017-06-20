@@ -7,6 +7,7 @@
 //
 
 #import "YGMeViewController.h"
+#import "YGSettingViewController.h"
 
 @interface YGMeViewController ()
 
@@ -35,9 +36,12 @@
     
     NSLog(@"%s", __func__);
 }
-//左边推荐关注
+//设置
 - (void)clickSetting {
     NSLog(@"%s", __func__);
+    //跳转到设置界面
+    YGSettingViewController *settingVC = [[YGSettingViewController alloc] init];
+    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 
