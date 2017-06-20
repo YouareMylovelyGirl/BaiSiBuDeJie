@@ -54,7 +54,9 @@
 {
     //添加阴影
     
-    self.backgroundColor = [UIColor colorWithRed:240 green:240 blue:240 alpha:1];
+//    self.backgroundColor = [UIColor colorWithRed:247 green:247 blue:247 alpha:1];
+//    self.backgroundColor = [UIColor colorWithRed:247.0 green:247.0 blue:247.0 alpha:1];
+    
 //
 //    self.layer.shadowRadius = 1.0f;
 //    self.layer.shadowColor = [UIColor blackColor].CGColor;

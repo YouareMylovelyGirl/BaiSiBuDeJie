@@ -30,9 +30,9 @@
 {
     [super viewDidLoad];
     //取消背景图片
-    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
-    //取消阴影横线
-    [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
+//    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
+//    //取消阴影横线
+//    [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
     
 }
 

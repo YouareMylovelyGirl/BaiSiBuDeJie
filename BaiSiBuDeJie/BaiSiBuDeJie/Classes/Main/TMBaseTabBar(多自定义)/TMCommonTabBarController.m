@@ -27,7 +27,6 @@
      如果需要颜色, 需要在每个方法下面都修改
      */
     
-    
 
     //label距离底端为3像素  默认 为0
     self.itemTitleToBottom = 4;

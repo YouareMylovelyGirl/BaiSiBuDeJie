@@ -16,7 +16,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    //设置导航条
+    [self setupNavBar];
+}
+
+
+#pragma mark - 设置导航条
+- (void)setupNavBar {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:[UIImage imageNamed:@"nav_item_game_icon"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"nav_item_game_click_icon"] forState:UIControlStateHighlighted];
+    [btn sizeToFit];
+    [btn addTarget:self action:@selector(game) forControlEvents:UIControlEventTouchUpInside];
+    
+    //如果不用view包一下, tabBarItem点击范围会变大
+    UIView *contentView = [[UIView alloc] initWithFrame:btn.bounds];
+    [contentView addSubview:btn];
+    
+    
+    UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithCustomView:contentView];
+    self.navigationItem.leftBarButtonItem = leftBarButton;
+}
+
+- (void)game {
+    NSLog(@"%s", __func__);
 }
 
 - (void)didReceiveMemoryWarning {

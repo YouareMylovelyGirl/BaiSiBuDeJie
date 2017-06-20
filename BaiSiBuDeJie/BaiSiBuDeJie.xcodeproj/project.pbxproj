@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FD76BAFFBABC194706B2E0B /* libPods-BaiSiBuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F427BC919F535100D99F6E /* libPods-BaiSiBuDeJie.a */; };
 		A43963311EF353D400C9903E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A439632F1EF353D400C9903E /* Main.storyboard */; };
 		A43963361EF353D400C9903E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43963341EF353D400C9903E /* LaunchScreen.storyboard */; };
 		A43A29761EF8DE26002206A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A29721EF8DE26002206A6 /* AppDelegate.m */; };
@@ -21,16 +22,23 @@
 		A4C42A1E1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A1D1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m */; };
 		A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A241EF8E31700D2C2A5 /* YGMeViewController.m */; };
 		A4C42A281EF8E32E00D2C2A5 /* YGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A271EF8E32E00D2C2A5 /* YGNewViewController.m */; };
+		A4C42A331EF8EB6C00D2C2A5 /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A2C1EF8EB6C00D2C2A5 /* NSObject+Parse.m */; };
+		A4C42A341EF8EB6C00D2C2A5 /* NSString+YG.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A2E1EF8EB6C00D2C2A5 /* NSString+YG.m */; };
+		A4C42A351EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A301EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m */; };
+		A4C42A361EF8EB6C00D2C2A5 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A321EF8EB6C00D2C2A5 /* UIView+HUD.m */; };
+		A4C42A481EF8F19900D2C2A5 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A451EF8F19900D2C2A5 /* BaseNetManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02B0D120D1C06683EAD9D8D8 /* Pods-BaiSiBuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
+		38F427BC919F535100D99F6E /* libPods-BaiSiBuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiBuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43963231EF353D400C9903E /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43963301EF353D400C9903E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A43963351EF353D400C9903E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A43A29711EF8DE26002206A6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A43A29721EF8DE26002206A6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A43A29731EF8DE26002206A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A43A29751EF8DE26002206A6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A43A29711EF8DE26002206A6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Other/AppDelegate.h; sourceTree = "<group>"; };
+		A43A29721EF8DE26002206A6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Other/AppDelegate.m; sourceTree = "<group>"; };
+		A43A29731EF8DE26002206A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Classes/Other/Assets.xcassets; sourceTree = "<group>"; };
+		A43A29751EF8DE26002206A6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/Other/main.m; sourceTree = "<group>"; };
 		A43A297A1EF8DE49002206A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4C42A0D1EF8E07100D2C2A5 /* TMBaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBaseTabBar.h; sourceTree = "<group>"; };
 		A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMBaseTabBar.m; sourceTree = "<group>"; };
@@ -48,6 +56,19 @@
 		A4C42A241EF8E31700D2C2A5 /* YGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGMeViewController.m; sourceTree = "<group>"; };
 		A4C42A261EF8E32E00D2C2A5 /* YGNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNewViewController.h; sourceTree = "<group>"; };
 		A4C42A271EF8E32E00D2C2A5 /* YGNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGNewViewController.m; sourceTree = "<group>"; };
+		A4C42A2B1EF8EB6C00D2C2A5 /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
+		A4C42A2C1EF8EB6C00D2C2A5 /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
+		A4C42A2D1EF8EB6C00D2C2A5 /* NSString+YG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YG.h"; sourceTree = "<group>"; };
+		A4C42A2E1EF8EB6C00D2C2A5 /* NSString+YG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YG.m"; sourceTree = "<group>"; };
+		A4C42A2F1EF8EB6C00D2C2A5 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
+		A4C42A301EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
+		A4C42A311EF8EB6C00D2C2A5 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
+		A4C42A321EF8EB6C00D2C2A5 /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
+		A4C42A441EF8F19900D2C2A5 /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
+		A4C42A451EF8F19900D2C2A5 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
+		A4C42A4A1EF8F1F500D2C2A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../../PrefixHeader.pch; sourceTree = "<group>"; };
+		A4C42A4B1EF8F24C00D2C2A5 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Const.h; path = ../../Const.h; sourceTree = "<group>"; };
+		EACFFD5D0983116D47B30489 /* Pods-BaiSiBuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +76,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FD76BAFFBABC194706B2E0B /* libPods-BaiSiBuDeJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B9E69FB4BF58B026A44BC85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02B0D120D1C06683EAD9D8D8 /* Pods-BaiSiBuDeJie.debug.xcconfig */,
+				EACFFD5D0983116D47B30489 /* Pods-BaiSiBuDeJie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2E2B7112D101C8B5F866796D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38F427BC919F535100D99F6E /* libPods-BaiSiBuDeJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A439631A1EF353D400C9903E = {
 			isa = PBXGroup;
 			children = (
 				A43963251EF353D400C9903E /* BaiSiBuDeJie */,
 				A43963241EF353D400C9903E /* Products */,
+				1B9E69FB4BF58B026A44BC85 /* Pods */,
+				2E2B7112D101C8B5F866796D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				A43A29471EF8D8A6002206A6 /* Classes */,
+				A4C42A431EF8F19900D2C2A5 /* NetManager */,
 				A4C42A291EF8E85900D2C2A5 /* Lib */,
 				A43963261EF353D400C9903E /* Supporting Files */,
 			);
@@ -90,6 +132,8 @@
 		A43963261EF353D400C9903E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A43A29751EF8DE26002206A6 /* main.m */,
+				A43A29731EF8DE26002206A6 /* Assets.xcassets */,
 				A43A297A1EF8DE49002206A6 /* Info.plist */,
 				A439632F1EF353D400C9903E /* Main.storyboard */,
 				A43963341EF353D400C9903E /* LaunchScreen.storyboard */,
@@ -100,6 +144,8 @@
 		A43A29471EF8D8A6002206A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A43A29711EF8DE26002206A6 /* AppDelegate.h */,
+				A43A29721EF8DE26002206A6 /* AppDelegate.m */,
 				A43A29501EF8D8A6002206A6 /* Main */,
 				A43A29481EF8D8A6002206A6 /* Essence */,
 				A43A294C1EF8D8A6002206A6 /* FriendTrend */,
@@ -253,10 +299,8 @@
 		A43A29701EF8DE26002206A6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				A43A29711EF8DE26002206A6 /* AppDelegate.h */,
-				A43A29721EF8DE26002206A6 /* AppDelegate.m */,
-				A43A29731EF8DE26002206A6 /* Assets.xcassets */,
-				A43A29751EF8DE26002206A6 /* main.m */,
+				A4C42A4B1EF8F24C00D2C2A5 /* Const.h */,
+				A4C42A4A1EF8F1F500D2C2A5 /* PrefixHeader.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -311,10 +355,35 @@
 		A4C42A291EF8E85900D2C2A5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A4C42A2A1EF8EB6C00D2C2A5 /* Category */,
 				A4C42A0C1EF8E07100D2C2A5 /* TMBaseTabBar */,
 			);
 			name = Lib;
 			path = Classes/Lib;
+			sourceTree = "<group>";
+		};
+		A4C42A2A1EF8EB6C00D2C2A5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A4C42A2B1EF8EB6C00D2C2A5 /* NSObject+Parse.h */,
+				A4C42A2C1EF8EB6C00D2C2A5 /* NSObject+Parse.m */,
+				A4C42A2D1EF8EB6C00D2C2A5 /* NSString+YG.h */,
+				A4C42A2E1EF8EB6C00D2C2A5 /* NSString+YG.m */,
+				A4C42A2F1EF8EB6C00D2C2A5 /* UIScrollView+Refresh.h */,
+				A4C42A301EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m */,
+				A4C42A311EF8EB6C00D2C2A5 /* UIView+HUD.h */,
+				A4C42A321EF8EB6C00D2C2A5 /* UIView+HUD.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A4C42A431EF8F19900D2C2A5 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4C42A441EF8F19900D2C2A5 /* BaseNetManager.h */,
+				A4C42A451EF8F19900D2C2A5 /* BaseNetManager.m */,
+			);
+			path = NetManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,9 +393,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A439633A1EF353D400C9903E /* Build configuration list for PBXNativeTarget "BaiSiBuDeJie" */;
 			buildPhases = (
+				F604437DDCB04441698FFBA0 /* [CP] Check Pods Manifest.lock */,
 				A439631F1EF353D400C9903E /* Sources */,
 				A43963201EF353D400C9903E /* Frameworks */,
 				A43963211EF353D400C9903E /* Resources */,
+				A4A9FB8D3F5E647E8790727B /* [CP] Embed Pods Frameworks */,
+				F53BCFA998866ABB703040CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,21 +458,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A4A9FB8D3F5E647E8790727B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F53BCFA998866ABB703040CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F604437DDCB04441698FFBA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A439631F1EF353D400C9903E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C42A361EF8EB6C00D2C2A5 /* UIView+HUD.m in Sources */,
+				A4C42A481EF8F19900D2C2A5 /* BaseNetManager.m in Sources */,
 				A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */,
 				A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */,
 				A4C42A1B1EF8E2C200D2C2A5 /* YGEssenceViewController.m in Sources */,
 				A4C42A181EF8E07100D2C2A5 /* TMCommonTabBarController.m in Sources */,
+				A4C42A331EF8EB6C00D2C2A5 /* NSObject+Parse.m in Sources */,
 				A43A29791EF8DE26002206A6 /* main.m in Sources */,
 				A4C42A1E1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m in Sources */,
+				A4C42A341EF8EB6C00D2C2A5 /* NSString+YG.m in Sources */,
 				A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */,
 				A4C42A281EF8E32E00D2C2A5 /* YGNewViewController.m in Sources */,
 				A43A29761EF8DE26002206A6 /* AppDelegate.m in Sources */,
 				A4C42A161EF8E07100D2C2A5 /* TMBaseTabBarController.m in Sources */,
+				A4C42A351EF8EB6C00D2C2A5 /* UIScrollView+Refresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,10 +643,12 @@
 		};
 		A439633B1EF353D400C9903E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02B0D120D1C06683EAD9D8D8 /* Pods-BaiSiBuDeJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = AY38N8FYFG;
+				GCC_PREFIX_HEADER = $PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = BaiSiBuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -532,10 +659,12 @@
 		};
 		A439633C1EF353D400C9903E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EACFFD5D0983116D47B30489 /* Pods-BaiSiBuDeJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = AY38N8FYFG;
+				GCC_PREFIX_HEADER = $PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = BaiSiBuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
