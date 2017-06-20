@@ -7,25 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A43963281EF353D400C9903E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A43963271EF353D400C9903E /* main.m */; };
 		A43963311EF353D400C9903E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A439632F1EF353D400C9903E /* Main.storyboard */; };
 		A43963361EF353D400C9903E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43963341EF353D400C9903E /* LaunchScreen.storyboard */; };
-		A43A29621EF8D8A6002206A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A295A1EF8D8A6002206A6 /* AppDelegate.m */; };
-		A43A29631EF8D8A6002206A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43A295B1EF8D8A6002206A6 /* Assets.xcassets */; };
-		A43A29641EF8D8A6002206A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A43A295C1EF8D8A6002206A6 /* Info.plist */; };
-		A43A29651EF8D8A6002206A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A295D1EF8D8A6002206A6 /* main.m */; };
+		A43A29761EF8DE26002206A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A29721EF8DE26002206A6 /* AppDelegate.m */; };
+		A43A29771EF8DE26002206A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43A29731EF8DE26002206A6 /* Assets.xcassets */; };
+		A43A29791EF8DE26002206A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A29751EF8DE26002206A6 /* main.m */; };
+		A43A297B1EF8DE49002206A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A43A297A1EF8DE49002206A6 /* Info.plist */; };
+		A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */; };
+		A4C42A161EF8E07100D2C2A5 /* TMBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A101EF8E07100D2C2A5 /* TMBaseTabBarController.m */; };
+		A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A121EF8E07100D2C2A5 /* TMBaseTabBarItems.m */; };
+		A4C42A181EF8E07100D2C2A5 /* TMCommonTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A141EF8E07100D2C2A5 /* TMCommonTabBarController.m */; };
+		A4C42A1B1EF8E2C200D2C2A5 /* YGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A1A1EF8E2C200D2C2A5 /* YGEssenceViewController.m */; };
+		A4C42A1E1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A1D1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m */; };
+		A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A241EF8E31700D2C2A5 /* YGMeViewController.m */; };
+		A4C42A281EF8E32E00D2C2A5 /* YGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A271EF8E32E00D2C2A5 /* YGNewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A43963231EF353D400C9903E /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A43963271EF353D400C9903E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A43963301EF353D400C9903E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A43963351EF353D400C9903E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A43A29591EF8D8A6002206A6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Other/AppDelegate.h; sourceTree = "<group>"; };
-		A43A295A1EF8D8A6002206A6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Other/AppDelegate.m; sourceTree = "<group>"; };
-		A43A295B1EF8D8A6002206A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Classes/Other/Assets.xcassets; sourceTree = "<group>"; };
-		A43A295C1EF8D8A6002206A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Classes/Other/Info.plist; sourceTree = "<group>"; };
-		A43A295D1EF8D8A6002206A6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A43A29711EF8DE26002206A6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A43A29721EF8DE26002206A6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A43A29731EF8DE26002206A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A43A29751EF8DE26002206A6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A43A297A1EF8DE49002206A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4C42A0D1EF8E07100D2C2A5 /* TMBaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBaseTabBar.h; sourceTree = "<group>"; };
+		A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMBaseTabBar.m; sourceTree = "<group>"; };
+		A4C42A0F1EF8E07100D2C2A5 /* TMBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBaseTabBarController.h; sourceTree = "<group>"; };
+		A4C42A101EF8E07100D2C2A5 /* TMBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMBaseTabBarController.m; sourceTree = "<group>"; };
+		A4C42A111EF8E07100D2C2A5 /* TMBaseTabBarItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBaseTabBarItems.h; sourceTree = "<group>"; };
+		A4C42A121EF8E07100D2C2A5 /* TMBaseTabBarItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMBaseTabBarItems.m; sourceTree = "<group>"; };
+		A4C42A131EF8E07100D2C2A5 /* TMCommonTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMCommonTabBarController.h; path = "TMBaseTabBar(多自定义)/TMCommonTabBarController.h"; sourceTree = "<group>"; };
+		A4C42A141EF8E07100D2C2A5 /* TMCommonTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMCommonTabBarController.m; path = "TMBaseTabBar(多自定义)/TMCommonTabBarController.m"; sourceTree = "<group>"; };
+		A4C42A191EF8E2C200D2C2A5 /* YGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceViewController.h; sourceTree = "<group>"; };
+		A4C42A1A1EF8E2C200D2C2A5 /* YGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceViewController.m; sourceTree = "<group>"; };
+		A4C42A1C1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFriendTrendViewController.h; sourceTree = "<group>"; };
+		A4C42A1D1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGFriendTrendViewController.m; sourceTree = "<group>"; };
+		A4C42A231EF8E31700D2C2A5 /* YGMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGMeViewController.h; sourceTree = "<group>"; };
+		A4C42A241EF8E31700D2C2A5 /* YGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGMeViewController.m; sourceTree = "<group>"; };
+		A4C42A261EF8E32E00D2C2A5 /* YGNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNewViewController.h; sourceTree = "<group>"; };
+		A4C42A271EF8E32E00D2C2A5 /* YGNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGNewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				A43A29471EF8D8A6002206A6 /* Classes */,
-				A43A295B1EF8D8A6002206A6 /* Assets.xcassets */,
-				A43A295C1EF8D8A6002206A6 /* Info.plist */,
+				A4C42A291EF8E85900D2C2A5 /* Lib */,
 				A43963261EF353D400C9903E /* Supporting Files */,
 			);
 			path = BaiSiBuDeJie;
@@ -69,7 +90,9 @@
 		A43963261EF353D400C9903E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A43963271EF353D400C9903E /* main.m */,
+				A43A297A1EF8DE49002206A6 /* Info.plist */,
+				A439632F1EF353D400C9903E /* Main.storyboard */,
+				A43963341EF353D400C9903E /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -77,14 +100,13 @@
 		A43A29471EF8D8A6002206A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A43A29591EF8D8A6002206A6 /* AppDelegate.h */,
-				A43A295A1EF8D8A6002206A6 /* AppDelegate.m */,
+				A43A29501EF8D8A6002206A6 /* Main */,
 				A43A29481EF8D8A6002206A6 /* Essence */,
 				A43A294C1EF8D8A6002206A6 /* FriendTrend */,
-				A43A29501EF8D8A6002206A6 /* Main */,
 				A43A29541EF8D8A6002206A6 /* New */,
-				A43A29581EF8D8A6002206A6 /* Other */,
+				A43A29701EF8DE26002206A6 /* Other */,
 				A43A295E1EF8D8A6002206A6 /* Public */,
+				A4C42A1F1EF8E30400D2C2A5 /* Me */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -102,6 +124,8 @@
 		A43A29491EF8D8A6002206A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4C42A191EF8E2C200D2C2A5 /* YGEssenceViewController.h */,
+				A4C42A1A1EF8E2C200D2C2A5 /* YGEssenceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -133,6 +157,8 @@
 		A43A294D1EF8D8A6002206A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4C42A1C1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.h */,
+				A4C42A1D1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,32 +180,10 @@
 		A43A29501EF8D8A6002206A6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A43A29511EF8D8A6002206A6 /* Controller */,
-				A43A29521EF8D8A6002206A6 /* Model */,
-				A43A29531EF8D8A6002206A6 /* View */,
+				A4C42A131EF8E07100D2C2A5 /* TMCommonTabBarController.h */,
+				A4C42A141EF8E07100D2C2A5 /* TMCommonTabBarController.m */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		A43A29511EF8D8A6002206A6 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		A43A29521EF8D8A6002206A6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A43A29531EF8D8A6002206A6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		A43A29541EF8D8A6002206A6 /* New */ = {
@@ -195,6 +199,8 @@
 		A43A29551EF8D8A6002206A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4C42A261EF8E32E00D2C2A5 /* YGNewViewController.h */,
+				A4C42A271EF8E32E00D2C2A5 /* YGNewViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,16 +217,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		A43A29581EF8D8A6002206A6 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				A439632F1EF353D400C9903E /* Main.storyboard */,
-				A43963341EF353D400C9903E /* LaunchScreen.storyboard */,
-				A43A295D1EF8D8A6002206A6 /* main.m */,
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 		A43A295E1EF8D8A6002206A6 /* Public */ = {
@@ -252,6 +248,73 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A43A29701EF8DE26002206A6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A43A29711EF8DE26002206A6 /* AppDelegate.h */,
+				A43A29721EF8DE26002206A6 /* AppDelegate.m */,
+				A43A29731EF8DE26002206A6 /* Assets.xcassets */,
+				A43A29751EF8DE26002206A6 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A4C42A0C1EF8E07100D2C2A5 /* TMBaseTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A4C42A0D1EF8E07100D2C2A5 /* TMBaseTabBar.h */,
+				A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */,
+				A4C42A0F1EF8E07100D2C2A5 /* TMBaseTabBarController.h */,
+				A4C42A101EF8E07100D2C2A5 /* TMBaseTabBarController.m */,
+				A4C42A111EF8E07100D2C2A5 /* TMBaseTabBarItems.h */,
+				A4C42A121EF8E07100D2C2A5 /* TMBaseTabBarItems.m */,
+			);
+			name = TMBaseTabBar;
+			path = "../Main/TMBaseTabBar(多自定义)";
+			sourceTree = "<group>";
+		};
+		A4C42A1F1EF8E30400D2C2A5 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				A4C42A201EF8E30400D2C2A5 /* Controller */,
+				A4C42A211EF8E30400D2C2A5 /* Model */,
+				A4C42A221EF8E30400D2C2A5 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		A4C42A201EF8E30400D2C2A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4C42A231EF8E31700D2C2A5 /* YGMeViewController.h */,
+				A4C42A241EF8E31700D2C2A5 /* YGMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4C42A211EF8E30400D2C2A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4C42A221EF8E30400D2C2A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4C42A291EF8E85900D2C2A5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A4C42A0C1EF8E07100D2C2A5 /* TMBaseTabBar */,
+			);
+			name = Lib;
+			path = Classes/Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,8 +378,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A43963361EF353D400C9903E /* LaunchScreen.storyboard in Resources */,
-				A43A29631EF8D8A6002206A6 /* Assets.xcassets in Resources */,
-				A43A29641EF8D8A6002206A6 /* Info.plist in Resources */,
+				A43A29771EF8DE26002206A6 /* Assets.xcassets in Resources */,
+				A43A297B1EF8DE49002206A6 /* Info.plist in Resources */,
 				A43963311EF353D400C9903E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,9 +391,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43A29651EF8D8A6002206A6 /* main.m in Sources */,
-				A43A29621EF8D8A6002206A6 /* AppDelegate.m in Sources */,
-				A43963281EF353D400C9903E /* main.m in Sources */,
+				A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */,
+				A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */,
+				A4C42A1B1EF8E2C200D2C2A5 /* YGEssenceViewController.m in Sources */,
+				A4C42A181EF8E07100D2C2A5 /* TMCommonTabBarController.m in Sources */,
+				A43A29791EF8DE26002206A6 /* main.m in Sources */,
+				A4C42A1E1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m in Sources */,
+				A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */,
+				A4C42A281EF8E32E00D2C2A5 /* YGNewViewController.m in Sources */,
+				A43A29761EF8DE26002206A6 /* AppDelegate.m in Sources */,
+				A4C42A161EF8E07100D2C2A5 /* TMBaseTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +413,6 @@
 				A43963301EF353D400C9903E /* Base */,
 			);
 			name = Main.storyboard;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		A43963341EF353D400C9903E /* LaunchScreen.storyboard */ = {
@@ -352,7 +421,6 @@
 				A43963351EF353D400C9903E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
