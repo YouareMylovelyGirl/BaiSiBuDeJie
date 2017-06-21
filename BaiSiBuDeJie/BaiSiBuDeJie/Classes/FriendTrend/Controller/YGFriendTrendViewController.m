@@ -7,6 +7,7 @@
 //
 
 #import "YGFriendTrendViewController.h"
+#import "YGLoginViewController.h"
 
 @interface YGFriendTrendViewController ()
 
@@ -16,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = YGRandomColor;
     [self setupNavBar];
 }
 
@@ -28,9 +28,16 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemButtonWithNormalImage:[UIImage imageNamed:@"friendsRecommentIcon"] hightLightImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:@selector(friendsRecommend)];
     
 }
+
+#pragma mark - action
 //左边推荐关注
 - (void)friendsRecommend {
     NSLog(@"%s", __func__);
+}
+//点击登录注册按钮
+- (IBAction)clickLogInRegister:(id)sender {
+    YGLoginViewController *loginVC = [[YGLoginViewController alloc] init];
+    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 @end
