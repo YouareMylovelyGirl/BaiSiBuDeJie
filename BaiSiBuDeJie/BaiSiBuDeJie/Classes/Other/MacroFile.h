@@ -51,8 +51,8 @@ FOUNDATION_EXPORT CGFloat MainScale();
 #define XcodeBundleVersion  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
 #define XcodeAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 
-#define ZKColor(r,g,b,a)        [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
-#define ZKRandomColor           ZKColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1)
+#define RGBColor(r,g,b,a)        [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
+#define RandomColor           RGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1)
 
 #define _loginUser          [AuthData loginUser]
 #define _applicationContext [ApplicationContext sharedContext]

@@ -29,18 +29,26 @@ static NSString * const ID = @"cell";
     self.title = @"推荐标签";
     //取消cell下面多余线
     self.tableView.tableFooterView = [[UIView alloc] init];
+    //取出cell下面的线, 因为调整cell之间的间距来显示线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YGRecommendCell class]) bundle:nil] forCellReuseIdentifier:ID];
+    //设置背景颜色
     self.view.backgroundColor = VIEW_BG_COLOR;
+    //加载指示器
+    [self.view showHUD];
 }
 //配置网络请求
 - (void)setupNetManager {
+    
     [YGNetManager GetRecommendConpletionHandler:^(NSArray<YGRecommendItem *> *obj, NSError *error) {
+        
         [self.recommendArr addObjectsFromArray:obj];
         NSLog(@"%@", self.recommendArr);
         //这里!!!!一定要记得刷新表格 日了
-        
         [self.tableView reloadData];
+        //隐藏指示器
+        [self.view hideHUD];
     }];
 }
 
@@ -68,6 +76,14 @@ static NSString * const ID = @"cell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80;
+}
+
+#pragma mark - life 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.view hideHUD];
+    //取消请求
+    
 }
 
 #pragma mark - lazy

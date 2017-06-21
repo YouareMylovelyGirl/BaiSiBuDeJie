@@ -57,7 +57,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     //处理cell的分割线 - 调整分割线距离
-    self.separatorInset = UIEdgeInsetsZero;
+//    self.separatorInset = UIEdgeInsetsZero;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

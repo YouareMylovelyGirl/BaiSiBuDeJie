@@ -25,10 +25,6 @@
     
     [self setupAllControllers];
     
-    
-    
-    
-    
 }
 
 
