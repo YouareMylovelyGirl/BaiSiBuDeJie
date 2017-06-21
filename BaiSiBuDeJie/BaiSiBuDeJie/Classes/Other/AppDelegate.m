@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YGADViewController.h"
+#import "TMCommonTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,8 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [YGNetManager GetADItemCompletionHandler:^(YGADItem *adItem, NSError *error) {
+        NSLog(@"");
+    }];
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[YGADViewController alloc]initWithNibName:@"YGADViewController" bundle:nil];
+    self.window.rootViewController = [[YGADViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }

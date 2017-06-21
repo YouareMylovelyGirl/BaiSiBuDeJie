@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5FD76BAFFBABC194706B2E0B /* libPods-BaiSiBuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F427BC919F535100D99F6E /* libPods-BaiSiBuDeJie.a */; };
+		A41F25621EF959DE002145F8 /* YGNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A41F25611EF959DE002145F8 /* YGNetManager.m */; };
 		A43963311EF353D400C9903E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A439632F1EF353D400C9903E /* Main.storyboard */; };
 		A43963361EF353D400C9903E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43963341EF353D400C9903E /* LaunchScreen.storyboard */; };
 		A43A29761EF8DE26002206A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A29721EF8DE26002206A6 /* AppDelegate.m */; };
@@ -16,6 +17,7 @@
 		A43A297B1EF8DE49002206A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A43A297A1EF8DE49002206A6 /* Info.plist */; };
 		A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097581EF948CF00AB6503 /* YGADViewController.m */; };
 		A450975D1EF949EF00AB6503 /* YGADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450975C1EF949EF00AB6503 /* YGADViewController.xib */; };
+		A45097611EF954A400AB6503 /* YGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097601EF954A400AB6503 /* YGADItem.m */; };
 		A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */; };
 		A4C42A161EF8E07100D2C2A5 /* TMBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A101EF8E07100D2C2A5 /* TMBaseTabBarController.m */; };
 		A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A121EF8E07100D2C2A5 /* TMBaseTabBarItems.m */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		02B0D120D1C06683EAD9D8D8 /* Pods-BaiSiBuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 		38F427BC919F535100D99F6E /* libPods-BaiSiBuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiBuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41F25601EF959DE002145F8 /* YGNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGNetManager.h; sourceTree = "<group>"; };
+		A41F25611EF959DE002145F8 /* YGNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGNetManager.m; sourceTree = "<group>"; };
 		A43963231EF353D400C9903E /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43963301EF353D400C9903E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A43963351EF353D400C9903E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		A45097581EF948CF00AB6503 /* YGADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGADViewController.m; sourceTree = "<group>"; };
 		A450975C1EF949EF00AB6503 /* YGADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGADViewController.xib; sourceTree = "<group>"; };
 		A450975E1EF94EB900AB6503 /* MacroFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroFile.h; sourceTree = "<group>"; };
+		A450975F1EF954A400AB6503 /* YGADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGADItem.h; sourceTree = "<group>"; };
+		A45097601EF954A400AB6503 /* YGADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGADItem.m; sourceTree = "<group>"; };
 		A4C42A0D1EF8E07100D2C2A5 /* TMBaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBaseTabBar.h; sourceTree = "<group>"; };
 		A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMBaseTabBar.m; sourceTree = "<group>"; };
 		A4C42A0F1EF8E07100D2C2A5 /* TMBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMBaseTabBarController.h; sourceTree = "<group>"; };
@@ -347,6 +353,8 @@
 		A45097551EF946F400AB6503 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A450975F1EF954A400AB6503 /* YGADItem.h */,
+				A45097601EF954A400AB6503 /* YGADItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -438,6 +446,8 @@
 			children = (
 				A4C42A441EF8F19900D2C2A5 /* BaseNetManager.h */,
 				A4C42A451EF8F19900D2C2A5 /* BaseNetManager.m */,
+				A41F25601EF959DE002145F8 /* YGNetManager.h */,
+				A41F25611EF959DE002145F8 /* YGNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -607,9 +617,11 @@
 				A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */,
 				A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */,
 				A4C42A511EF906BA00D2C2A5 /* YGNavigationController.m in Sources */,
+				A41F25621EF959DE002145F8 /* YGNetManager.m in Sources */,
 				A4C42A1B1EF8E2C200D2C2A5 /* YGEssenceViewController.m in Sources */,
 				A4C42A181EF8E07100D2C2A5 /* TMCommonTabBarController.m in Sources */,
 				A4C42A331EF8EB6C00D2C2A5 /* NSObject+Parse.m in Sources */,
+				A45097611EF954A400AB6503 /* YGADItem.m in Sources */,
 				A43A29791EF8DE26002206A6 /* main.m in Sources */,
 				A4C42A1E1EF8E2DE00D2C2A5 /* YGFriendTrendViewController.m in Sources */,
 				A4C42A4E1EF9013D00D2C2A5 /* UIBarButtonItem+item.m in Sources */,
