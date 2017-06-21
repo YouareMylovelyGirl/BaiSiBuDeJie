@@ -17,6 +17,13 @@
 
 @implementation YGRecommendCell
 
+//使用这个方法可以设置分局的间距
+- (void)setFrame:(CGRect)frame {
+    
+    frame.size.height -= 10;
+    [super setFrame:frame];
+}
+
 - (void)setRecommendItem:(YGRecommendItem *)recommendItem {
     _recommendItem = recommendItem;
     //使用设置图片圆角分类

@@ -22,6 +22,7 @@
 		A4660F331EFA08A500D75D1E /* YGRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4660F311EFA08A500D75D1E /* YGRecommendCell.xib */; };
 		A4660F361EFA10AE00D75D1E /* UIImage+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = A4660F351EFA10AE00D75D1E /* UIImage+Round.m */; };
 		A4660F391EFA152200D75D1E /* UIImageView+round.m in Sources */ = {isa = PBXBuildFile; fileRef = A4660F381EFA152200D75D1E /* UIImageView+round.m */; };
+		A4660F3B1EFA23D700D75D1E /* CFunctionImplement.m in Sources */ = {isa = PBXBuildFile; fileRef = A4660F3A1EFA23D700D75D1E /* CFunctionImplement.m */; };
 		A4BA327F1EF9F53F005C93FC /* YGRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA327E1EF9F53F005C93FC /* YGRecommendViewController.m */; };
 		A4BA32851EF9F944005C93FC /* YGRecommendItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA32841EF9F944005C93FC /* YGRecommendItem.m */; };
 		A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */; };
@@ -68,6 +69,7 @@
 		A4660F351EFA10AE00D75D1E /* UIImage+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Round.m"; sourceTree = "<group>"; };
 		A4660F371EFA152200D75D1E /* UIImageView+round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+round.h"; sourceTree = "<group>"; };
 		A4660F381EFA152200D75D1E /* UIImageView+round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+round.m"; sourceTree = "<group>"; };
+		A4660F3A1EFA23D700D75D1E /* CFunctionImplement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFunctionImplement.m; sourceTree = "<group>"; };
 		A4BA327D1EF9F53F005C93FC /* YGRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRecommendViewController.h; sourceTree = "<group>"; };
 		A4BA327E1EF9F53F005C93FC /* YGRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGRecommendViewController.m; sourceTree = "<group>"; };
 		A4BA32831EF9F944005C93FC /* YGRecommendItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRecommendItem.h; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 		A43A29701EF8DE26002206A6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A4660F3A1EFA23D700D75D1E /* CFunctionImplement.m */,
 				A450975E1EF94EB900AB6503 /* MacroFile.h */,
 				A4C42A4B1EF8F24C00D2C2A5 /* Const.h */,
 				A4C42A4A1EF8F1F500D2C2A5 /* PrefixHeader.pch */,
@@ -693,6 +696,7 @@
 				A4BA327F1EF9F53F005C93FC /* YGRecommendViewController.m in Sources */,
 				A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */,
 				A4C42A281EF8E32E00D2C2A5 /* YGNewViewController.m in Sources */,
+				A4660F3B1EFA23D700D75D1E /* CFunctionImplement.m in Sources */,
 				A43A29761EF8DE26002206A6 /* AppDelegate.m in Sources */,
 				A4C42A581EF90D2400D2C2A5 /* YGSettingViewController.m in Sources */,
 				A4C42A161EF8E07100D2C2A5 /* TMBaseTabBarController.m in Sources */,

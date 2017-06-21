@@ -31,7 +31,7 @@ static NSString * const ID = @"cell";
     self.tableView.tableFooterView = [[UIView alloc] init];
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YGRecommendCell class]) bundle:nil] forCellReuseIdentifier:ID];
-
+    self.view.backgroundColor = VIEW_BG_COLOR;
 }
 //配置网络请求
 - (void)setupNetManager {
