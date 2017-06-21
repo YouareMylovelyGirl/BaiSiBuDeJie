@@ -45,13 +45,12 @@
     //如果子视图超出父视图范围, 自视图将不能响应
     //登录界面
     self.middleLoginView = [YGLoginRegisterMiddleView loginMiddleView];
-
     [self.middleView addSubview:self.middleLoginView];
     
     //注册界面
     self.middleRegisterView = [YGLoginRegisterMiddleView registerMiddleView];
-
     [self.middleView addSubview:self.middleRegisterView];
+    
 }
 
 - (void)didReceiveMemoryWarning {

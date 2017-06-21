@@ -31,6 +31,7 @@
 		A4660F531EFA603600D75D1E /* YGThirdBoardLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4660F521EFA603600D75D1E /* YGThirdBoardLoginView.m */; };
 		A4660F551EFA604200D75D1E /* YGThirdBoardLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4660F541EFA604200D75D1E /* YGThirdBoardLoginView.xib */; };
 		A4660F581EFA6A6000D75D1E /* YGThirdBoardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4660F571EFA6A6000D75D1E /* YGThirdBoardButton.m */; };
+		A4660F5B1EFA7B8500D75D1E /* YGLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = A4660F5A1EFA7B8500D75D1E /* YGLoginField.m */; };
 		A4BA327F1EF9F53F005C93FC /* YGRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA327E1EF9F53F005C93FC /* YGRecommendViewController.m */; };
 		A4BA32851EF9F944005C93FC /* YGRecommendItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA32841EF9F944005C93FC /* YGRecommendItem.m */; };
 		A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */; };
@@ -90,6 +91,8 @@
 		A4660F541EFA604200D75D1E /* YGThirdBoardLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGThirdBoardLoginView.xib; sourceTree = "<group>"; };
 		A4660F561EFA6A6000D75D1E /* YGThirdBoardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGThirdBoardButton.h; sourceTree = "<group>"; };
 		A4660F571EFA6A6000D75D1E /* YGThirdBoardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGThirdBoardButton.m; sourceTree = "<group>"; };
+		A4660F591EFA7B8500D75D1E /* YGLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLoginField.h; sourceTree = "<group>"; };
+		A4660F5A1EFA7B8500D75D1E /* YGLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGLoginField.m; sourceTree = "<group>"; };
 		A4BA327D1EF9F53F005C93FC /* YGRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRecommendViewController.h; sourceTree = "<group>"; };
 		A4BA327E1EF9F53F005C93FC /* YGRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGRecommendViewController.m; sourceTree = "<group>"; };
 		A4BA32831EF9F944005C93FC /* YGRecommendItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRecommendItem.h; sourceTree = "<group>"; };
@@ -447,6 +450,8 @@
 				A4660F541EFA604200D75D1E /* YGThirdBoardLoginView.xib */,
 				A4660F561EFA6A6000D75D1E /* YGThirdBoardButton.h */,
 				A4660F571EFA6A6000D75D1E /* YGThirdBoardButton.m */,
+				A4660F591EFA7B8500D75D1E /* YGLoginField.h */,
+				A4660F5A1EFA7B8500D75D1E /* YGLoginField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -749,6 +754,7 @@
 				A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */,
 				A4660F581EFA6A6000D75D1E /* YGThirdBoardButton.m in Sources */,
 				A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */,
+				A4660F5B1EFA7B8500D75D1E /* YGLoginField.m in Sources */,
 				A4BA32851EF9F944005C93FC /* YGRecommendItem.m in Sources */,
 				A4C42A511EF906BA00D2C2A5 /* YGNavigationController.m in Sources */,
 				A4660F391EFA152200D75D1E /* UIImageView+round.m in Sources */,
