@@ -15,4 +15,17 @@
         !completionHandler ?: completionHandler([YGADItem Parse:obj], error);
     }];
 }
+
++ (id)GetRecommendConpletionHandler:(void (^)(NSArray<YGRecommendItem *> *, NSError *))completionHandler {
+    NSString *recommendStr = @"http://api.budejie.com/api/api_open.php";
+    NSDictionary *param = @{
+                            @"a": @"tag_recommend",
+                            @"action": @"sub",
+                            @"c": @"topic"
+                            };
+    
+    return [self GET:recommendStr param:param completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGRecommendItem Parse:obj], error);
+    }];
+}
 @end

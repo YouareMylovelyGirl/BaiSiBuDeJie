@@ -40,4 +40,7 @@
 #import "YGNetManager.h"
 
 #import "NSString+YG.h"
+
+#import "UIImage+Round.h"
+#import "UIImageView+round.h"
 #endif /* PrefixHeader_pch */

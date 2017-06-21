@@ -30,11 +30,12 @@
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3D-HY-Ms6">
-                    <rect key="frame" x="267" y="30" width="88" height="34"/>
+                    <rect key="frame" x="267" y="30" width="88" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.39992958690987124" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="88" id="GLc-zr-4tE"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="  跳过  (3)  ">
                         <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                     </state>

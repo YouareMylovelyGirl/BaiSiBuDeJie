@@ -17,10 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [YGNetManager GetADItemCompletionHandler:^(YGADItem *adItem, NSError *error) {
-        NSLog(@"");
-    }];
+
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[YGADViewController alloc] init];

@@ -7,6 +7,7 @@
 //
 
 #import "YGNewViewController.h"
+#import "YGRecommendViewController.h"
 
 @interface YGNewViewController ()
 
@@ -28,7 +29,8 @@
 }
 //左边subIcon
 - (void)subIcon {
-    NSLog(@"%s", __func__);
+    YGRecommendViewController *recommend = [[YGRecommendViewController alloc] init];
+    [self.navigationController pushViewController:recommend animated:YES];
 }
 
 
