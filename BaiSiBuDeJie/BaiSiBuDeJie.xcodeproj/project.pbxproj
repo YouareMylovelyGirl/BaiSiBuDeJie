@@ -55,6 +55,8 @@
 		A4C42A4E1EF9013D00D2C2A5 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A4D1EF9013D00D2C2A5 /* UIBarButtonItem+item.m */; };
 		A4C42A511EF906BA00D2C2A5 /* YGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A501EF906BA00D2C2A5 /* YGNavigationController.m */; };
 		A4C42A581EF90D2400D2C2A5 /* YGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A571EF90D2400D2C2A5 /* YGSettingViewController.m */; };
+		A4DFFEAB1EFB9E0600E85C67 /* YGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DFFEA91EFB9E0600E85C67 /* YGWebViewController.m */; };
+		A4DFFEAC1EFB9E0600E85C67 /* YGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4DFFEAA1EFB9E0600E85C67 /* YGWebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +146,9 @@
 		A4C42A501EF906BA00D2C2A5 /* YGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGNavigationController.m; sourceTree = "<group>"; };
 		A4C42A561EF90D2400D2C2A5 /* YGSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSettingViewController.h; sourceTree = "<group>"; };
 		A4C42A571EF90D2400D2C2A5 /* YGSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSettingViewController.m; sourceTree = "<group>"; };
+		A4DFFEA81EFB9E0600E85C67 /* YGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGWebViewController.h; sourceTree = "<group>"; };
+		A4DFFEA91EFB9E0600E85C67 /* YGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGWebViewController.m; sourceTree = "<group>"; };
+		A4DFFEAA1EFB9E0600E85C67 /* YGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGWebViewController.xib; sourceTree = "<group>"; };
 		EACFFD5D0983116D47B30489 /* Pods-BaiSiBuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -546,6 +551,9 @@
 				A4C42A231EF8E31700D2C2A5 /* YGMeViewController.h */,
 				A4C42A241EF8E31700D2C2A5 /* YGMeViewController.m */,
 				A43BC0361EFB552B002A8F96 /* YGMeViewController.storyboard */,
+				A4DFFEA81EFB9E0600E85C67 /* YGWebViewController.h */,
+				A4DFFEA91EFB9E0600E85C67 /* YGWebViewController.m */,
+				A4DFFEAA1EFB9E0600E85C67 /* YGWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -711,6 +719,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4DFFEAC1EFB9E0600E85C67 /* YGWebViewController.xib in Resources */,
 				A4660F331EFA08A500D75D1E /* YGRecommendCell.xib in Resources */,
 				A43963361EF353D400C9903E /* LaunchScreen.storyboard in Resources */,
 				A43BC03C1EFB5D30002A8F96 /* YGSquareCell.xib in Resources */,
@@ -782,6 +791,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C42A361EF8EB6C00D2C2A5 /* UIView+HUD.m in Sources */,
+				A4DFFEAB1EFB9E0600E85C67 /* YGWebViewController.m in Sources */,
 				A4C42A481EF8F19900D2C2A5 /* BaseNetManager.m in Sources */,
 				A43BC03B1EFB5D30002A8F96 /* YGSquareCell.m in Sources */,
 				A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */,

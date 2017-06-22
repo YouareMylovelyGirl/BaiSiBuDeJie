@@ -9,7 +9,7 @@
 #import "YGMeViewController.h"
 #import "YGSettingViewController.h"
 #import "YGSquareCell.h"
-#import <SafariServices/SafariServices.h>
+#import "YGWebViewController.h"
 
 #define cols 4
 
@@ -146,16 +146,12 @@ static NSString * const ID = @"cell";
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    /*
-     1. 导入safariSerices框架
-     */
     YGSquareSquare_ListItem *item = self.squareArray[indexPath.row];
-    if (![item.url containsString:@"http"] || [item.url containsString:@"https"]) return;
+    if (![item.url containsString:@"http"]) return;
     
-    SFSafariViewController *safariVC = [[SFSafariViewController alloc] initWithURL:item.url.yg_URL];
-    self.navigationController.navigationBarHidden = YES;
-    [self.navigationController pushViewController:safariVC animated:YES];
-    
+    YGWebViewController *webVC = [[[YGWebViewController alloc] init]initWithURLString:item.url];
+    [self.navigationController pushViewController:webVC animated:YES];
+
 }
 
 
