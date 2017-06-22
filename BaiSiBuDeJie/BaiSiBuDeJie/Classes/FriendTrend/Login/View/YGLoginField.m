@@ -24,18 +24,23 @@
     [self addTarget:self action:@selector(textBegin) forControlEvents:UIControlEventEditingDidBegin];
     [self addTarget:self action:@selector(textEnd) forControlEvents:UIControlEventEditingDidEnd];
     //设置一个初始颜色
-    self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor]}];
+    self.placeholderColor = [UIColor lightGrayColor];
+
 }
 
 //开始编辑
 - (void)textBegin {
     // 设置占位文字变成白色
-    self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+//    self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    //获取占位文字控件
+    
+    //或者使用KVC进行赋值
+    self.placeholderColor = [UIColor whiteColor];
 }
 //结束编辑
 - (void)textEnd {
     // 设置占位文字变成原色
-    self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor]}];
+    self.placeholderColor = [UIColor lightGrayColor];
 }
 
 @end

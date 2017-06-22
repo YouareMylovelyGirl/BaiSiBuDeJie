@@ -28,4 +28,16 @@
         !completionHandler ?: completionHandler([YGRecommendItem Parse:obj], error);
     }];
 }
+
+
++ (id)GetSquareItemCompletionHandler:(void (^)(YGSquareItem *, NSError *))completionHandler {
+    NSString *squareStr = @"http://api.budejie.com/api/api_open.php";
+    NSDictionary *param = @{
+                            @"a": @"square",
+                            @"c": @"topic"
+                            };
+    return [self GET:squareStr param:param completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGSquareItem Parse:obj], error);
+    }];
+}
 @end

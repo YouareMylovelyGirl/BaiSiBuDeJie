@@ -74,8 +74,12 @@
     [self configColorAndFont];
     
     //第四个控制器
-    YGNavigationController *meNav = [[YGNavigationController alloc] initWithRootViewController:[[YGMeViewController alloc] init]];
-    
+
+    //加载storyBoard
+    UIStoryboard *meStoryBoard = [UIStoryboard storyboardWithName:NSStringFromClass([YGMeViewController class]) bundle:nil];
+    //加载箭头所指向的控制器
+    YGMeViewController *meVC = [meStoryBoard instantiateInitialViewController];
+    YGNavigationController *meNav = [[YGNavigationController alloc] initWithRootViewController:meVC];
     [self tabBarItemWithControllerIndes:4 controller:meNav title:@"我" normalImageName:@"tabBar_me_icon" selectedImageName:@"tabBar_me_click_icon" tabBarItemType:kTMBaseTabBarItemNormal withCustomItemBlock:nil];
     [self configColorAndFont];
     

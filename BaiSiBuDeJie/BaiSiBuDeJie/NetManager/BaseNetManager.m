@@ -12,7 +12,7 @@
 + (id)GET:(NSString *)path param:(NSDictionary *)param completionHandler:(void (^)(id, NSError *))completionHandler
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer.timeoutInterval = 10;
+    manager.requestSerializer.timeoutInterval = 60;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
     return [manager GET:path parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -28,7 +28,7 @@
 + (id)POST:(NSString *)path param:(NSDictionary *)param completionHandler:(void (^)(id, NSError *))completionHandler
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer.timeoutInterval = 15;
+    manager.requestSerializer.timeoutInterval = 60;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
     return [manager POST:path parameters:param progress:^(NSProgress * _Nonnull uploadProgress) {
         

@@ -15,6 +15,10 @@
 		A43A29771EF8DE26002206A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43A29731EF8DE26002206A6 /* Assets.xcassets */; };
 		A43A29791EF8DE26002206A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A29751EF8DE26002206A6 /* main.m */; };
 		A43A297B1EF8DE49002206A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A43A297A1EF8DE49002206A6 /* Info.plist */; };
+		A43BC0351EFB41F9002A8F96 /* UITextField+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = A43BC0341EFB41F9002A8F96 /* UITextField+placeholder.m */; };
+		A43BC0371EFB552B002A8F96 /* YGMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43BC0361EFB552B002A8F96 /* YGMeViewController.storyboard */; };
+		A43BC03B1EFB5D30002A8F96 /* YGSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A43BC0391EFB5D30002A8F96 /* YGSquareCell.m */; };
+		A43BC03C1EFB5D30002A8F96 /* YGSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BC03A1EFB5D30002A8F96 /* YGSquareCell.xib */; };
 		A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097581EF948CF00AB6503 /* YGADViewController.m */; };
 		A450975D1EF949EF00AB6503 /* YGADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450975C1EF949EF00AB6503 /* YGADViewController.xib */; };
 		A45097611EF954A400AB6503 /* YGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097601EF954A400AB6503 /* YGADItem.m */; };
@@ -32,6 +36,7 @@
 		A4660F551EFA604200D75D1E /* YGThirdBoardLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4660F541EFA604200D75D1E /* YGThirdBoardLoginView.xib */; };
 		A4660F581EFA6A6000D75D1E /* YGThirdBoardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4660F571EFA6A6000D75D1E /* YGThirdBoardButton.m */; };
 		A4660F5B1EFA7B8500D75D1E /* YGLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = A4660F5A1EFA7B8500D75D1E /* YGLoginField.m */; };
+		A4AA61BC1EFB694D00DD3687 /* YGSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AA61BB1EFB694D00DD3687 /* YGSquareItem.m */; };
 		A4BA327F1EF9F53F005C93FC /* YGRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA327E1EF9F53F005C93FC /* YGRecommendViewController.m */; };
 		A4BA32851EF9F944005C93FC /* YGRecommendItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA32841EF9F944005C93FC /* YGRecommendItem.m */; };
 		A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A0E1EF8E07100D2C2A5 /* TMBaseTabBar.m */; };
@@ -65,6 +70,12 @@
 		A43A29731EF8DE26002206A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Classes/Other/Assets.xcassets; sourceTree = "<group>"; };
 		A43A29751EF8DE26002206A6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/Other/main.m; sourceTree = "<group>"; };
 		A43A297A1EF8DE49002206A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A43BC0331EFB41F9002A8F96 /* UITextField+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+placeholder.h"; sourceTree = "<group>"; };
+		A43BC0341EFB41F9002A8F96 /* UITextField+placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+placeholder.m"; sourceTree = "<group>"; };
+		A43BC0361EFB552B002A8F96 /* YGMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YGMeViewController.storyboard; sourceTree = "<group>"; };
+		A43BC0381EFB5D30002A8F96 /* YGSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSquareCell.h; sourceTree = "<group>"; };
+		A43BC0391EFB5D30002A8F96 /* YGSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSquareCell.m; sourceTree = "<group>"; };
+		A43BC03A1EFB5D30002A8F96 /* YGSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGSquareCell.xib; sourceTree = "<group>"; };
 		A45097571EF948CF00AB6503 /* YGADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGADViewController.h; sourceTree = "<group>"; };
 		A45097581EF948CF00AB6503 /* YGADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGADViewController.m; sourceTree = "<group>"; };
 		A450975C1EF949EF00AB6503 /* YGADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGADViewController.xib; sourceTree = "<group>"; };
@@ -93,6 +104,8 @@
 		A4660F571EFA6A6000D75D1E /* YGThirdBoardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGThirdBoardButton.m; sourceTree = "<group>"; };
 		A4660F591EFA7B8500D75D1E /* YGLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGLoginField.h; sourceTree = "<group>"; };
 		A4660F5A1EFA7B8500D75D1E /* YGLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGLoginField.m; sourceTree = "<group>"; };
+		A4AA61BA1EFB694D00DD3687 /* YGSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSquareItem.h; sourceTree = "<group>"; };
+		A4AA61BB1EFB694D00DD3687 /* YGSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSquareItem.m; sourceTree = "<group>"; };
 		A4BA327D1EF9F53F005C93FC /* YGRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRecommendViewController.h; sourceTree = "<group>"; };
 		A4BA327E1EF9F53F005C93FC /* YGRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGRecommendViewController.m; sourceTree = "<group>"; };
 		A4BA32831EF9F944005C93FC /* YGRecommendItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGRecommendItem.h; sourceTree = "<group>"; };
@@ -185,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				A43A29471EF8D8A6002206A6 /* Classes */,
-				A4C42A431EF8F19900D2C2A5 /* NetManager */,
 				A4C42A291EF8E85900D2C2A5 /* Lib */,
 				A43963261EF353D400C9903E /* Supporting Files */,
 			);
@@ -209,25 +221,27 @@
 			children = (
 				A43A29711EF8DE26002206A6 /* AppDelegate.h */,
 				A43A29721EF8DE26002206A6 /* AppDelegate.m */,
-				A45097531EF946F400AB6503 /* AD */,
-				A43A29501EF8D8A6002206A6 /* Main */,
-				A43A29481EF8D8A6002206A6 /* Essence */,
-				A43A294C1EF8D8A6002206A6 /* FriendTrend */,
-				A43A29541EF8D8A6002206A6 /* New */,
-				A43A295E1EF8D8A6002206A6 /* Public */,
-				A4C42A1F1EF8E30400D2C2A5 /* Me */,
+				A43A29501EF8D8A6002206A6 /* Main(主体) */,
+				A45097531EF946F400AB6503 /* AD(广告) */,
+				A43A29481EF8D8A6002206A6 /* Essence(精华) */,
+				A43A29541EF8D8A6002206A6 /* New(新帖) */,
+				A43A295E1EF8D8A6002206A6 /* Public(发布) */,
+				A43A294C1EF8D8A6002206A6 /* FriendTrend(关注) */,
+				A4C42A1F1EF8E30400D2C2A5 /* Me(我) */,
+				A4C42A431EF8F19900D2C2A5 /* NetManager */,
 				A43A29701EF8DE26002206A6 /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		A43A29481EF8D8A6002206A6 /* Essence */ = {
+		A43A29481EF8D8A6002206A6 /* Essence(精华) */ = {
 			isa = PBXGroup;
 			children = (
 				A43A29491EF8D8A6002206A6 /* Controller */,
 				A43A294A1EF8D8A6002206A6 /* Model */,
 				A43A294B1EF8D8A6002206A6 /* View */,
 			);
+			name = "Essence(精华)";
 			path = Essence;
 			sourceTree = "<group>";
 		};
@@ -254,14 +268,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A43A294C1EF8D8A6002206A6 /* FriendTrend */ = {
+		A43A294C1EF8D8A6002206A6 /* FriendTrend(关注) */ = {
 			isa = PBXGroup;
 			children = (
-				A4660F3E1EFA358D00D75D1E /* Login */,
+				A4660F3E1EFA358D00D75D1E /* Login(登录) */,
 				A43A294D1EF8D8A6002206A6 /* Controller */,
 				A43A294E1EF8D8A6002206A6 /* Model */,
 				A43A294F1EF8D8A6002206A6 /* View */,
 			);
+			name = "FriendTrend(关注)";
 			path = FriendTrend;
 			sourceTree = "<group>";
 		};
@@ -289,7 +304,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A43A29501EF8D8A6002206A6 /* Main */ = {
+		A43A29501EF8D8A6002206A6 /* Main(主体) */ = {
 			isa = PBXGroup;
 			children = (
 				A4C42A131EF8E07100D2C2A5 /* TMCommonTabBarController.h */,
@@ -297,10 +312,11 @@
 				A4C42A4F1EF906BA00D2C2A5 /* YGNavigationController.h */,
 				A4C42A501EF906BA00D2C2A5 /* YGNavigationController.m */,
 			);
+			name = "Main(主体)";
 			path = Main;
 			sourceTree = "<group>";
 		};
-		A43A29541EF8D8A6002206A6 /* New */ = {
+		A43A29541EF8D8A6002206A6 /* New(新帖) */ = {
 			isa = PBXGroup;
 			children = (
 				A4BA32791EF9F52D005C93FC /* Recommend */,
@@ -308,6 +324,7 @@
 				A43A29561EF8D8A6002206A6 /* Model */,
 				A43A29571EF8D8A6002206A6 /* View */,
 			);
+			name = "New(新帖)";
 			path = New;
 			sourceTree = "<group>";
 		};
@@ -334,13 +351,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A43A295E1EF8D8A6002206A6 /* Public */ = {
+		A43A295E1EF8D8A6002206A6 /* Public(发布) */ = {
 			isa = PBXGroup;
 			children = (
 				A43A295F1EF8D8A6002206A6 /* Controller */,
 				A43A29601EF8D8A6002206A6 /* Model */,
 				A43A29611EF8D8A6002206A6 /* View */,
 			);
+			name = "Public(发布)";
 			path = Public;
 			sourceTree = "<group>";
 		};
@@ -376,13 +394,14 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		A45097531EF946F400AB6503 /* AD */ = {
+		A45097531EF946F400AB6503 /* AD(广告) */ = {
 			isa = PBXGroup;
 			children = (
 				A45097541EF946F400AB6503 /* Controller */,
 				A45097551EF946F400AB6503 /* Model */,
 				A45097561EF946F400AB6503 /* View */,
 			);
+			name = "AD(广告)";
 			path = AD;
 			sourceTree = "<group>";
 		};
@@ -412,13 +431,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A4660F3E1EFA358D00D75D1E /* Login */ = {
+		A4660F3E1EFA358D00D75D1E /* Login(登录) */ = {
 			isa = PBXGroup;
 			children = (
 				A4660F3F1EFA358D00D75D1E /* Controller */,
 				A4660F401EFA358D00D75D1E /* Model */,
 				A4660F411EFA358D00D75D1E /* View */,
 			);
+			name = "Login(登录)";
 			path = Login;
 			sourceTree = "<group>";
 		};
@@ -508,14 +528,15 @@
 			path = "../Main/TMBaseTabBar(多自定义)";
 			sourceTree = "<group>";
 		};
-		A4C42A1F1EF8E30400D2C2A5 /* Me */ = {
+		A4C42A1F1EF8E30400D2C2A5 /* Me(我) */ = {
 			isa = PBXGroup;
 			children = (
-				A4C42A521EF90CFE00D2C2A5 /* Setting */,
+				A4C42A521EF90CFE00D2C2A5 /* Setting(设置) */,
 				A4C42A201EF8E30400D2C2A5 /* Controller */,
 				A4C42A211EF8E30400D2C2A5 /* Model */,
 				A4C42A221EF8E30400D2C2A5 /* View */,
 			);
+			name = "Me(我)";
 			path = Me;
 			sourceTree = "<group>";
 		};
@@ -524,6 +545,7 @@
 			children = (
 				A4C42A231EF8E31700D2C2A5 /* YGMeViewController.h */,
 				A4C42A241EF8E31700D2C2A5 /* YGMeViewController.m */,
+				A43BC0361EFB552B002A8F96 /* YGMeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -531,6 +553,8 @@
 		A4C42A211EF8E30400D2C2A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4AA61BA1EFB694D00DD3687 /* YGSquareItem.h */,
+				A4AA61BB1EFB694D00DD3687 /* YGSquareItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -538,6 +562,9 @@
 		A4C42A221EF8E30400D2C2A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A43BC0381EFB5D30002A8F96 /* YGSquareCell.h */,
+				A43BC0391EFB5D30002A8F96 /* YGSquareCell.m */,
+				A43BC03A1EFB5D30002A8F96 /* YGSquareCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -569,6 +596,8 @@
 				A4660F351EFA10AE00D75D1E /* UIImage+Round.m */,
 				A4660F371EFA152200D75D1E /* UIImageView+round.h */,
 				A4660F381EFA152200D75D1E /* UIImageView+round.m */,
+				A43BC0331EFB41F9002A8F96 /* UITextField+placeholder.h */,
+				A43BC0341EFB41F9002A8F96 /* UITextField+placeholder.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -581,16 +610,18 @@
 				A41F25601EF959DE002145F8 /* YGNetManager.h */,
 				A41F25611EF959DE002145F8 /* YGNetManager.m */,
 			);
-			path = NetManager;
+			name = NetManager;
+			path = ../NetManager;
 			sourceTree = "<group>";
 		};
-		A4C42A521EF90CFE00D2C2A5 /* Setting */ = {
+		A4C42A521EF90CFE00D2C2A5 /* Setting(设置) */ = {
 			isa = PBXGroup;
 			children = (
 				A4C42A531EF90CFE00D2C2A5 /* Controller */,
 				A4C42A541EF90CFE00D2C2A5 /* Model */,
 				A4C42A551EF90CFE00D2C2A5 /* View */,
 			);
+			name = "Setting(设置)";
 			path = Setting;
 			sourceTree = "<group>";
 		};
@@ -682,11 +713,13 @@
 			files = (
 				A4660F331EFA08A500D75D1E /* YGRecommendCell.xib in Resources */,
 				A43963361EF353D400C9903E /* LaunchScreen.storyboard in Resources */,
+				A43BC03C1EFB5D30002A8F96 /* YGSquareCell.xib in Resources */,
 				A4660F461EFA35A500D75D1E /* YGLoginViewController.xib in Resources */,
 				A4660F3D1EFA30EE00D75D1E /* YGFriendTrendViewController.xib in Resources */,
 				A450975D1EF949EF00AB6503 /* YGADViewController.xib in Resources */,
 				A4660F501EFA4BC300D75D1E /* YGLoginRegisterMiddleView.xib in Resources */,
 				A43A29771EF8DE26002206A6 /* Assets.xcassets in Resources */,
+				A43BC0371EFB552B002A8F96 /* YGMeViewController.storyboard in Resources */,
 				A4660F551EFA604200D75D1E /* YGThirdBoardLoginView.xib in Resources */,
 				A43A297B1EF8DE49002206A6 /* Info.plist in Resources */,
 				A43963311EF353D400C9903E /* Main.storyboard in Resources */,
@@ -750,6 +783,7 @@
 			files = (
 				A4C42A361EF8EB6C00D2C2A5 /* UIView+HUD.m in Sources */,
 				A4C42A481EF8F19900D2C2A5 /* BaseNetManager.m in Sources */,
+				A43BC03B1EFB5D30002A8F96 /* YGSquareCell.m in Sources */,
 				A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */,
 				A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */,
 				A4660F581EFA6A6000D75D1E /* YGThirdBoardButton.m in Sources */,
@@ -773,7 +807,9 @@
 				A4BA327F1EF9F53F005C93FC /* YGRecommendViewController.m in Sources */,
 				A4C42A151EF8E07100D2C2A5 /* TMBaseTabBar.m in Sources */,
 				A4C42A281EF8E32E00D2C2A5 /* YGNewViewController.m in Sources */,
+				A4AA61BC1EFB694D00DD3687 /* YGSquareItem.m in Sources */,
 				A4660F3B1EFA23D700D75D1E /* CFunctionImplement.m in Sources */,
+				A43BC0351EFB41F9002A8F96 /* UITextField+placeholder.m in Sources */,
 				A4660F451EFA35A500D75D1E /* YGLoginViewController.m in Sources */,
 				A43A29761EF8DE26002206A6 /* AppDelegate.m in Sources */,
 				A4C42A581EF90D2400D2C2A5 /* YGSettingViewController.m in Sources */,
