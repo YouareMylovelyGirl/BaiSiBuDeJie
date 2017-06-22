@@ -57,6 +57,7 @@
 		A4C42A581EF90D2400D2C2A5 /* YGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C42A571EF90D2400D2C2A5 /* YGSettingViewController.m */; };
 		A4DFFEAB1EFB9E0600E85C67 /* YGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DFFEA91EFB9E0600E85C67 /* YGWebViewController.m */; };
 		A4DFFEAC1EFB9E0600E85C67 /* YGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4DFFEAA1EFB9E0600E85C67 /* YGWebViewController.xib */; };
+		A4DFFEB31EFBBEC100E85C67 /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DFFEB21EFBBEC100E85C67 /* FileTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +150,8 @@
 		A4DFFEA81EFB9E0600E85C67 /* YGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGWebViewController.h; sourceTree = "<group>"; };
 		A4DFFEA91EFB9E0600E85C67 /* YGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGWebViewController.m; sourceTree = "<group>"; };
 		A4DFFEAA1EFB9E0600E85C67 /* YGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGWebViewController.xib; sourceTree = "<group>"; };
+		A4DFFEB11EFBBEC100E85C67 /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
+		A4DFFEB21EFBBEC100E85C67 /* FileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
 		EACFFD5D0983116D47B30489 /* Pods-BaiSiBuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -580,6 +583,7 @@
 		A4C42A291EF8E85900D2C2A5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A4DFFEAD1EFBBD4E00E85C67 /* Tool */,
 				A4C42A2A1EF8EB6C00D2C2A5 /* Category */,
 				A4C42A0C1EF8E07100D2C2A5 /* TMBaseTabBar */,
 			);
@@ -654,6 +658,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A4DFFEAD1EFBBD4E00E85C67 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A4DFFEB11EFBBEC100E85C67 /* FileTools.h */,
+				A4DFFEB21EFBBEC100E85C67 /* FileTools.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -802,6 +815,7 @@
 				A4BA32851EF9F944005C93FC /* YGRecommendItem.m in Sources */,
 				A4C42A511EF906BA00D2C2A5 /* YGNavigationController.m in Sources */,
 				A4660F391EFA152200D75D1E /* UIImageView+round.m in Sources */,
+				A4DFFEB31EFBBEC100E85C67 /* FileTools.m in Sources */,
 				A41F25621EF959DE002145F8 /* YGNetManager.m in Sources */,
 				A4C42A1B1EF8E2C200D2C2A5 /* YGEssenceViewController.m in Sources */,
 				A4C42A181EF8E07100D2C2A5 /* TMCommonTabBarController.m in Sources */,
