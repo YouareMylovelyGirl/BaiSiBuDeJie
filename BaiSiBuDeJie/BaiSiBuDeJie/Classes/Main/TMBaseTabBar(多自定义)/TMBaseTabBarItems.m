@@ -46,9 +46,9 @@
 {
     self.itemTitleToBottom = 0;
     //系统按钮
-    self.titleToImageViewMargin = 5;
+    self.titleToImageViewMargin = 0;
     //自定义
-    self.imageAndlabelMargin = 7;
+    self.imageAndlabelMargin = 0;
     self.normalTitleNormalColor = [UIColor grayColor];
     self.normalTitleSelectesColor = [UIColor blueColor];
     self.customTitlwNormalColor = [UIColor cyanColor];

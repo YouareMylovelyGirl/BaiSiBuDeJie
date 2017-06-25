@@ -14,6 +14,8 @@
 #import "YGNavigationController.h"
 
 @interface TMCommonTabBarController ()
+/** 上一次点击的按钮 */
+@property(nonatomic, strong) TMBaseTabBarItems *previousClickedTabBarItems;
 
 @end
 
@@ -25,6 +27,7 @@
     
     [self setupAllControllers];
     
+    [self addTargetWithTabBarButton];
 }
 
 
@@ -36,11 +39,11 @@
     
     
     //label距离底端为3像素  默认 为0
-    self.itemTitleToBottom = 4;
+    self.itemTitleToBottom = 3;
     //标题和图片的间距 在显示位置的基础上 加 减
-    self.titleToImageViewMargin = -7;
+    self.titleToImageViewMargin = 0;
     //自定义情况下的图片与label之间的距离  在显示位置的基础上 加 减
-    self.customImageAndlabelMargin = -5;
+    self.customImageAndlabelMargin = -2;
     
     //不设置 默认10
     self.fontSize = 10;
@@ -96,9 +99,34 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 添加按钮点击事件
+- (void)addTargetWithTabBarButton {
+    
+    //开始先进性赋值  --- 默认第一个为已经选中的按钮
+    self.previousClickedTabBarItems = self.tabBarItems[0];
+    
+    for (TMBaseTabBarItems *items in self.tabBarItems) {
+        if (items.tabBarItemType == kTMBaseTabBarItemNormal) {
+            [items addTarget:self action:@selector(clickNormalTabBarButton:) forControlEvents:UIControlEventTouchUpInside];
+        }
+    }
+}
+
+//监听按钮点击   --- 使用三部曲   --- 判断之前点击过的按钮, 像现在点击的按钮赋值给原来点击过的
+- (void)clickNormalTabBarButton:(TMBaseTabBarItems *)tabBarItems {
+    NSInteger index = [self.TMBaseTabBar.subviews indexOfObject:tabBarItems];
+    //监听重复点击
+    if (self.previousClickedTabBarItems == tabBarItems) {
+//        NSLog(@"%s", __func__);
+        //处理刷新
+        
+        //利用通知传播出去  1 对 多  ----  发出通知  告知外界tabBarItems被人点击了
+        //通知 规范    前缀 主题 动词 notification
+        //如果有需要可以将userInfo带出去
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMTabBarItemsDidRepeatClickedNotifecation object:nil userInfo:@{@"BaseTabBarItems": self.tabBarItems[index]}];
+        
+    }
+    self.previousClickedTabBarItems = tabBarItems;
 }
 
 

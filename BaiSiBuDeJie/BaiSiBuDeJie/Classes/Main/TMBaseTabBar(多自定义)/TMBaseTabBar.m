@@ -53,7 +53,7 @@
 - (void)configTMBaseTabBar
 {
 //    self.backgroundColor = [UIColor colorWithRed:247.0 / 255 green:247.0 / 255 blue:247.0 / 255 alpha:1];
-    
+    self.backgroundColor = self.tabBarBackGroundColor;
     //添加阴影
 //    self.layer.shadowRadius = 1.0f;
 //    self.layer.shadowColor = [UIColor blackColor].CGColor;
