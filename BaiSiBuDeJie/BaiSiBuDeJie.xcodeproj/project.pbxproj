@@ -19,6 +19,7 @@
 		A43BC0371EFB552B002A8F96 /* YGMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43BC0361EFB552B002A8F96 /* YGMeViewController.storyboard */; };
 		A43BC03B1EFB5D30002A8F96 /* YGSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A43BC0391EFB5D30002A8F96 /* YGSquareCell.m */; };
 		A43BC03C1EFB5D30002A8F96 /* YGSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43BC03A1EFB5D30002A8F96 /* YGSquareCell.xib */; };
+		A43D57FE1EFF390C00561BBC /* YGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D57FD1EFF390C00561BBC /* YGTitleButton.m */; };
 		A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097581EF948CF00AB6503 /* YGADViewController.m */; };
 		A450975D1EF949EF00AB6503 /* YGADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450975C1EF949EF00AB6503 /* YGADViewController.xib */; };
 		A45097611EF954A400AB6503 /* YGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097601EF954A400AB6503 /* YGADItem.m */; };
@@ -79,6 +80,8 @@
 		A43BC0381EFB5D30002A8F96 /* YGSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGSquareCell.h; sourceTree = "<group>"; };
 		A43BC0391EFB5D30002A8F96 /* YGSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGSquareCell.m; sourceTree = "<group>"; };
 		A43BC03A1EFB5D30002A8F96 /* YGSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGSquareCell.xib; sourceTree = "<group>"; };
+		A43D57FC1EFF390C00561BBC /* YGTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGTitleButton.h; sourceTree = "<group>"; };
+		A43D57FD1EFF390C00561BBC /* YGTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGTitleButton.m; sourceTree = "<group>"; };
 		A45097571EF948CF00AB6503 /* YGADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGADViewController.h; sourceTree = "<group>"; };
 		A45097581EF948CF00AB6503 /* YGADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGADViewController.m; sourceTree = "<group>"; };
 		A450975C1EF949EF00AB6503 /* YGADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGADViewController.xib; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 		A43A294B1EF8D8A6002206A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A43D57FC1EFF390C00561BBC /* YGTitleButton.h */,
+				A43D57FD1EFF390C00561BBC /* YGTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -809,6 +814,7 @@
 				A43BC03B1EFB5D30002A8F96 /* YGSquareCell.m in Sources */,
 				A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */,
 				A4C42A171EF8E07100D2C2A5 /* TMBaseTabBarItems.m in Sources */,
+				A43D57FE1EFF390C00561BBC /* YGTitleButton.m in Sources */,
 				A4660F581EFA6A6000D75D1E /* YGThirdBoardButton.m in Sources */,
 				A4C42A251EF8E31700D2C2A5 /* YGMeViewController.m in Sources */,
 				A4660F5B1EFA7B8500D75D1E /* YGLoginField.m in Sources */,

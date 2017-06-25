@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "YGADViewController.h"
 #import "TMCommonTabBarController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -21,7 +22,7 @@
 
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[YGADViewController alloc] init];
+    self.window.rootViewController = [[TMCommonTabBarController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }
