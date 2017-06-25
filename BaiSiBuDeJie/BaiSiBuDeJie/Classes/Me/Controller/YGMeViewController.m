@@ -33,6 +33,27 @@ static NSString * const ID = @"cell";
     [self setupFootView];
     [self setupNetmanager];
     [self setupTableViewMargin];
+    
+    //添加双击按钮的刷新操作
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshMeViewController:) name:TMTabBarItemsDidRepeatClickedNotifecation object:nil ];
+}
+
+#pragma mark - 监听tabBar按钮被点击了
+- (void)refreshMeViewController:(NSNotification *)notification {
+    
+//    TMBaseTabBarItems *tabBarItems = notification.userInfo[@"BaseTabBarItems"];
+    //判断如果不是我的控制器直接return
+//    if (tabBarItems.tag != 12583) {
+//        return;
+//    }
+    //如果控制器window为nil直接return
+    if (self.view.window == nil) {
+        return;
+    }
+    
+    
+    
+    NSLog(@"%@ -- 刷新数据", self.class);
 }
 
 //处理tableView分组的间距 和 头部间距
@@ -152,6 +173,12 @@ static NSString * const ID = @"cell";
     YGWebViewController *webVC = [[[YGWebViewController alloc] init]initWithURLString:item.url];
     [self.navigationController pushViewController:webVC animated:YES];
 
+}
+
+#pragma mark - life
+- (void)dealloc {
+    //移除通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 

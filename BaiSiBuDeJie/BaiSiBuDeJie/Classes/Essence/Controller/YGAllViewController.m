@@ -8,6 +8,7 @@
 
 #import "YGAllViewController.h"
 
+
 @interface YGAllViewController ()
 
 @end
@@ -18,12 +19,43 @@
     [super viewDidLoad];
     self.tableView.contentInset = UIEdgeInsetsMake(99, 0, 49, 0);
     NSLog(@"%s", __func__);
+    
+    //添加双击按钮的刷新操作
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:TMTabBarItemsDidRepeatClickedNotifecation object:nil ];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonRepeatClick) name:YGTitleButtonDidRepeatClickedNotifecation object:nil ];
+}
+#pragma mark - 监听tabBar按钮被点击了
+- (void)tabBarButtonDidRepeatClick {
+
+    if (self.view.window == nil) {
+        return;
+    }
+    //如果判断不能点击状态栏滚动到最上面, 直接return
+    if (self.tableView.scrollsToTop == NO) {
+        return;
+    }
+
+    
+    NSLog(@"%@ -- 刷新数据", self.class);
+}
+
+//标题按钮被人点击
+- (void)titleButtonRepeatClick {
+    [self tabBarButtonDidRepeatClick];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)dealloc {
+    //移除通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:TMTabBarItemsDidRepeatClickedNotifecation object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:YGTitleButtonDidRepeatClickedNotifecation object:nil];
+}
+
 
 #pragma mark - Table view data source
 

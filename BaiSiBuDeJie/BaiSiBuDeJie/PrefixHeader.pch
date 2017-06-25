@@ -44,4 +44,5 @@
 #import "UIImage+Round.h"
 #import "UIImageView+round.h"
 #import "UITextField+placeholder.h"
+#import "TMBaseTabBarItems.h"
 #endif /* PrefixHeader_pch */

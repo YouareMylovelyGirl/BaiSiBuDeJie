@@ -45,4 +45,10 @@
 #import "UIBarButtonItem+item.h"
 
 
+//通知  tabBarItems被人点击
+#define TMTabBarItemsDidRepeatClickedNotifecation @"TMTabBarItemsDidRepeatClickedNotifecation"
+// 标题view被人点击
+#define YGTitleButtonDidRepeatClickedNotifecation @"YGTitleButtonDidRepeatClickedNotifecation"
+
+
 

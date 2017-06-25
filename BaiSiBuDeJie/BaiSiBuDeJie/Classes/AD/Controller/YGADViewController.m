@@ -102,6 +102,9 @@
 }
 //点击按钮直接跳过广告界面
 - (IBAction)skipADView:(id)sender {
+    
+    //也可以应用代理来进行 控制器之间的跳转
+    
     self.view.window.rootViewController = [[TMCommonTabBarController alloc] init];
 }
 

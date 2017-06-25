@@ -16,6 +16,18 @@
 
 @implementation AppDelegate
 
+//如果想监听点击状态栏, 只需要在这个文件中 实现这个方法
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    //严谨期间 判断触摸点
+//    UITouch *touch = touches.anyObject;
+//    CGPoint point = [touch locationInView:nil];
+//    if (point.y > 20) {
+//        return;
+//    }
+//    //点击状态栏需要做的事情
+//    
+//    NSLog(@"%s", __func__);
+//};
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 

@@ -78,6 +78,8 @@
     scrollView.pagingEnabled = YES;
     scrollView.backgroundColor = [UIColor greenColor];
     scrollView.frame = self.view.bounds;
+    //点击状态栏不会滚动到最顶部
+    scrollView.scrollsToTop = NO;
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
     
@@ -159,6 +161,14 @@
 }
 //监听按钮点击
 - (void)titleButtonClick:(YGTitleButton *)titleButton {
+    //相当于重复点击了
+    if (self.previousClickedTitleButton == titleButton) {
+        //发动重复点击通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:YGTitleButtonDidRepeatClickedNotifecation object:nil];
+    }
+    
+    //滚动scrollView到标题按钮对应的控制器view ---- 也可以给tag赋值
+    NSUInteger index = [self.titleView.subviews indexOfObject:titleButton];
     
     //让之前按钮变回原来颜色
     self.previousClickedTitleButton.selected = NO;
@@ -168,8 +178,7 @@
     self.previousClickedTitleButton = titleButton;
 //    NSLog(@"%s", __func__);
     
-    //滚动scrollView到标题按钮对应的控制器view ---- 也可以给tag赋值
-    NSUInteger index = [self.titleView.subviews indexOfObject:titleButton];
+    
     //控制标题底部线条移动
     [UIView animateWithDuration:0.25 animations:^{
         NSString *currentTitle = [titleButton titleForState:UIControlStateNormal];
@@ -183,6 +192,27 @@
         //显示第索引个控制器view
         [self addChildViewIntoScrollView:index];
     }];
+    
+    //设置index位置对应的tableView.ScrollToTop为yes, 其他设置为no
+    for (NSUInteger i = 0; i < self.childViewControllers.count; i++) {
+        UIViewController *chileVC = self.childViewControllers[i];
+        //如果没有创建好的控制器, 直接跳过, 继续接下来
+        if (!chileVC.isViewLoaded) {
+            continue;
+        }
+        
+        UIScrollView *scrollView = (UIScrollView *)chileVC.view;
+        if (![scrollView isKindOfClass:[UIScrollView class]]) {
+            continue;
+        }
+        //如果便利 i 的值和 索引值相同的时候 可以滚动到顶部
+//        if (i == index) {
+//            scrollView.scrollsToTop = YES;
+//        } else {
+//            scrollView.scrollsToTop = NO;
+//        }
+        scrollView.scrollsToTop = (i == index);
+    }
     
 }
 
@@ -209,6 +239,7 @@
     [self titleButtonClick:titleButton];
     
 }
+
 
 #pragma mark - other
 //默认情况下 显示第索引个控制器
