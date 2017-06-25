@@ -214,12 +214,14 @@
 //默认情况下 显示第索引个控制器
 -(void) addChildViewIntoScrollView:(NSInteger)index {
     
-    CGFloat scrollViewW = self.scrollView.width;
-    CGFloat scrollViewH = self.scrollView.height;
-
     UIView *chileView = self.childViewControllers[index].view;
-    chileView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, scrollViewH);
+    //如果父控件加过了, 就不用继续下去了   ---- 或者判断window  childView.window  return; ---- 或者 取出控制器, 如果 vc.isViewLoad return;
+    if (chileView.superview) {
+        return;
+    }
+    chileView.frame = self.scrollView.bounds;
     chileView.backgroundColor = YGRandomColor;
     [self.scrollView addSubview:chileView];
+    
 }
 @end
