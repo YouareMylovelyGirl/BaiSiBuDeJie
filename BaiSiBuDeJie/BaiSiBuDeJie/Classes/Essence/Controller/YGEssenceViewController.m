@@ -16,13 +16,15 @@
 
 
 
-@interface YGEssenceViewController ()
+@interface YGEssenceViewController ()<UIScrollViewDelegate>
 /** 标题栏视图 */
 @property(nonatomic, strong) UIView *titleView;
 /** 上一个点击的标题按钮 */
 @property(nonatomic, strong) YGTitleButton *previousClickedTitleButton;
 /** 下划线 */
 @property(nonatomic, strong) UIView *titleUnderLine;
+/** 用于存放所有自控制器的 */
+@property(nonatomic, strong) UIScrollView *scrollView;
 
 
 
@@ -70,24 +72,26 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.delegate = self;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
     scrollView.backgroundColor = [UIColor greenColor];
     scrollView.frame = self.view.bounds;
     [self.view addSubview:scrollView];
+    self.scrollView = scrollView;
     
     NSUInteger count = self.childViewControllers.count;
     CGFloat scrollViewW = scrollView.width;
-    CGFloat scrollViewH = scrollView.height;
-    
-    for (NSUInteger i = 0; i < count; i++) {
-        
-        UIView *chileView = self.childViewControllers[i].view;
-        chileView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
-        chileView.backgroundColor = YGRandomColor;
-        [scrollView addSubview:chileView];
-    }
+//    CGFloat scrollViewH = scrollView.height;
+//
+//    for (NSUInteger i = 0; i < count; i++) {
+//        
+//        UIView *chileView = self.childViewControllers[i].view;
+//        chileView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
+//        chileView.backgroundColor = YGRandomColor;
+//        [scrollView addSubview:chileView];
+//    }
     scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
     
 }
@@ -115,9 +119,8 @@
     [self.titleView addSubview:underLine];
     self.titleUnderLine = underLine;
 
-    firstButton.selected = YES;
-    self.previousClickedTitleButton = firstButton;
-    NSLog(@"%s", __func__);
+    
+//    NSLog(@"%s", __func__);
     
     NSString *currentTitle = [firstButton titleForState:UIControlStateNormal];
     //获取一段文字宽高, 使用sizeWithAttributes
@@ -126,6 +129,12 @@
 
     [firstButton.titleLabel sizeToFit];
     
+    //默认选中第一个按钮
+    firstButton.selected = YES;
+    self.previousClickedTitleButton = firstButton;
+    
+    //添加第0个控制器
+    [self addChildViewIntoScrollView:0];
 }
 
 //标题栏按钮
@@ -150,19 +159,29 @@
 }
 //监听按钮点击
 - (void)titleButtonClick:(YGTitleButton *)titleButton {
+    
     //让之前按钮变回原来颜色
     self.previousClickedTitleButton.selected = NO;
     //现在点的变成原来的按钮
     titleButton.selected = YES;
     //给新的按钮赋值
     self.previousClickedTitleButton = titleButton;
-    NSLog(@"%s", __func__);
+//    NSLog(@"%s", __func__);
+    
+    //滚动scrollView到标题按钮对应的控制器view ---- 也可以给tag赋值
+    NSUInteger index = [self.titleView.subviews indexOfObject:titleButton];
     //控制标题底部线条移动
     [UIView animateWithDuration:0.25 animations:^{
         NSString *currentTitle = [titleButton titleForState:UIControlStateNormal];
         //获取一段文字宽高, 使用sizeWithAttributes
         self.titleUnderLine.width = [currentTitle sizeWithAttributes:@{NSFontAttributeName: titleButton.titleLabel.font}].width + 10;
         self.titleUnderLine.centerX = titleButton.centerX;
+
+        CGFloat offsetX = self.scrollView.width * index;
+        self.scrollView.contentOffset = CGPointMake(offsetX, self.scrollView.contentOffset.y);
+    } completion:^(BOOL finished) {
+        //显示第索引个控制器view
+        [self addChildViewIntoScrollView:index];
     }];
     
 }
@@ -181,19 +200,26 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    //点击对应的标题按钮
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    //点击对应按钮 ----- 如果是按照tag获取, tag不能够为0.  因为tag 0 是控件自己
+    YGTitleButton *titleButton = self.titleView.subviews[index];
+    [self titleButtonClick:titleButton];
+    
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - other
+//默认情况下 显示第索引个控制器
+-(void) addChildViewIntoScrollView:(NSInteger)index {
+    
+    CGFloat scrollViewW = self.scrollView.width;
+    CGFloat scrollViewH = self.scrollView.height;
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UIView *chileView = self.childViewControllers[index].view;
+    chileView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, scrollViewH);
+    chileView.backgroundColor = YGRandomColor;
+    [self.scrollView addSubview:chileView];
 }
-*/
-
 @end
