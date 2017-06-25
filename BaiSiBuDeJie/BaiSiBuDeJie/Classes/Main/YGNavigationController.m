@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //设置导航不透明
-    self.navigationBar.translucent = NO;
+//    self.navigationBar.translucent = NO;
 }
 
 

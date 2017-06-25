@@ -15,5 +15,6 @@
 + (id)GetADItemCompletionHandler:(void(^)(YGADItem *adItem, NSError *error))completionHandler;
 //新帖中的推荐
 + (id)GetRecommendConpletionHandler:(void(^)(NSArray<YGRecommendItem *> *obj, NSError *error))completionHandler;
+//设置九宫格数据
 + (id)GetSquareItemCompletionHandler:(void(^)(YGSquareItem *squareItem, NSError *error))completionHandler;
 @end

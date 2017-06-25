@@ -180,6 +180,8 @@ FOUNDATION_EXPORT CGFloat AutoFitCellRowHeight(CGFloat baseRowHeight, NSInteger 
 
 #define NetManager                          [HttpManager defaultManager]
 
+
+
 typedef NS_ENUM(NSInteger, GENDER) {
     GENDER_WOMEN = 0,
     GENDER_MAN,

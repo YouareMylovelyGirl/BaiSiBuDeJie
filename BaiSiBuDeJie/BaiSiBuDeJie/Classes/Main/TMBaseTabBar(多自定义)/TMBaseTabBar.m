@@ -52,7 +52,7 @@
 #pragma mark - 配置TMBaseTabBar
 - (void)configTMBaseTabBar
 {
-    self.backgroundColor = [UIColor colorWithRed:247.0 / 255 green:247.0 / 255 blue:247.0 / 255 alpha:1];
+//    self.backgroundColor = [UIColor colorWithRed:247.0 / 255 green:247.0 / 255 blue:247.0 / 255 alpha:1];
     
     //添加阴影
 //    self.layer.shadowRadius = 1.0f;
