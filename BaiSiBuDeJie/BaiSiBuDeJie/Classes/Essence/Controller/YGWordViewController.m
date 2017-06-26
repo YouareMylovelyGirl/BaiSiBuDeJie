@@ -18,8 +18,8 @@
     [super viewDidLoad];
     
     self.tableView.contentInset = UIEdgeInsetsMake(99, 0, 49, 0);
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(99, 0, 49, 0);
     NSLog(@"%s", __func__);
-    
     //添加双击按钮的刷新操作
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:TMTabBarItemsDidRepeatClickedNotifecation object:nil ];
     
