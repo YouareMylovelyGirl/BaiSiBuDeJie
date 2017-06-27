@@ -114,6 +114,20 @@
 }
 
 #pragma mark - scrollViewDelegate
+//松开scrollView
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    //当scrollView的偏移量y值 <= offsetY值 代表header已经完全出现
+    CGFloat offsetY = - (self.tableView.contentInset.top + self.header.height);
+    NSLog(@"%f  -- %f --- %f ---- %f",self.tableView.contentInset.bottom,  self.header.height, offsetY, self.tableView.contentOffset.y);
+    if (self.tableView.contentOffset.y <= offsetY) {
+        //进入下拉刷新状态
+        self.headerRefreshing = YES;
+        NSLog(@"进入刷新状态");
+        self.headerLabel.text = @"正在刷新了..";
+        self.headerLabel.backgroundColor = [UIColor orangeColor];
+    }
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     //处理header
     [self dealHeader];
@@ -123,6 +137,11 @@
 
 //处理header
 - (void)dealHeader {
+    //如果正在下拉刷新return
+    if (self.isHeaderRefreshing) {
+        return;
+    }
+    
     //当scrollView的偏移量y值 <= offsetY值 代表header已经完全出现
     CGFloat offsetY = - (self.tableView.contentInset.top + self.header.height);
     NSLog(@"%f  -- %f --- %f ---- %f",self.tableView.contentInset.bottom,  self.header.height, offsetY, self.tableView.contentOffset.y);
