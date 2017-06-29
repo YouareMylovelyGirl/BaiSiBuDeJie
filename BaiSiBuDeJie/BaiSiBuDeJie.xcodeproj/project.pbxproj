@@ -25,6 +25,7 @@
 		A43D58071EFF74F000561BBC /* YGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D58061EFF74F000561BBC /* YGVideoViewController.m */; };
 		A43D580A1EFF74FC00561BBC /* YGPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D58091EFF74FC00561BBC /* YGPictureViewController.m */; };
 		A43D580D1EFF750500561BBC /* YGWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43D580C1EFF750500561BBC /* YGWordViewController.m */; };
+		A4431C3E1F052127001F408D /* YGEssenceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4431C3D1F052127001F408D /* YGEssenceItem.m */; };
 		A45097591EF948CF00AB6503 /* YGADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097581EF948CF00AB6503 /* YGADViewController.m */; };
 		A450975D1EF949EF00AB6503 /* YGADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A450975C1EF949EF00AB6503 /* YGADViewController.xib */; };
 		A45097611EF954A400AB6503 /* YGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A45097601EF954A400AB6503 /* YGADItem.m */; };
@@ -97,6 +98,8 @@
 		A43D58091EFF74FC00561BBC /* YGPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGPictureViewController.m; sourceTree = "<group>"; };
 		A43D580B1EFF750500561BBC /* YGWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGWordViewController.h; sourceTree = "<group>"; };
 		A43D580C1EFF750500561BBC /* YGWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGWordViewController.m; sourceTree = "<group>"; };
+		A4431C3C1F052127001F408D /* YGEssenceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGEssenceItem.h; sourceTree = "<group>"; };
+		A4431C3D1F052127001F408D /* YGEssenceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGEssenceItem.m; sourceTree = "<group>"; };
 		A45097571EF948CF00AB6503 /* YGADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGADViewController.h; sourceTree = "<group>"; };
 		A45097581EF948CF00AB6503 /* YGADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGADViewController.m; sourceTree = "<group>"; };
 		A450975C1EF949EF00AB6503 /* YGADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YGADViewController.xib; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 		A43A294A1EF8D8A6002206A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4431C3C1F052127001F408D /* YGEssenceItem.h */,
+				A4431C3D1F052127001F408D /* YGEssenceItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -852,6 +857,7 @@
 				A4DFFEB31EFBBEC100E85C67 /* FileTools.m in Sources */,
 				A41F25621EF959DE002145F8 /* YGNetManager.m in Sources */,
 				A4C42A1B1EF8E2C200D2C2A5 /* YGEssenceViewController.m in Sources */,
+				A4431C3E1F052127001F408D /* YGEssenceItem.m in Sources */,
 				A4C42A181EF8E07100D2C2A5 /* TMCommonTabBarController.m in Sources */,
 				A4660F361EFA10AE00D75D1E /* UIImage+Round.m in Sources */,
 				A4C42A331EF8EB6C00D2C2A5 /* NSObject+Parse.m in Sources */,
