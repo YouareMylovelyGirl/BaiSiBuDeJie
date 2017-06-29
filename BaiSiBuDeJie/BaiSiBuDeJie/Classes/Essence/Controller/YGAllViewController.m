@@ -243,11 +243,11 @@
 //    [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top)) animated:YES];
     
     [UIView animateWithDuration:0.25 animations:^{
-//        self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top));
         
         UIEdgeInsets inset = self.tableView.contentInset;
         inset.top += self.header.height;
         self.tableView.contentInset = inset;
+        //        self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top));
 
     } completion:^(BOOL finished) {
         //加载最新数据
