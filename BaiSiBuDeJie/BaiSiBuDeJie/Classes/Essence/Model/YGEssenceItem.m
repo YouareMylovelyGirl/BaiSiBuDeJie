@@ -9,5 +9,24 @@
 #import "YGEssenceItem.h"
 
 @implementation YGEssenceItem
++ (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass {
+    return @{
+             @"list": @"YGEssenceListItem"
+             };
+}
+@end
+
+@implementation YGEssenceInfoItem
 
 @end
+
+
+@implementation YGEssenceListItem
++ (NSDictionary<NSString *,id> *)modelCustomPropertyMapper {
+    return @{
+             @"id": @"ID"
+             };
+}
+@end
+
+

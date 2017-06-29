@@ -24,6 +24,12 @@
 /** 下啦刷新正在刷新 */
 @property(nonatomic, assign, getter=isHeaderRefreshing) BOOL headerRefreshing;
 
+/** 精华全部数据 */
+@property(nonatomic, strong) NSMutableArray *AllMArray;
+/** 分页加载时最大时间 */
+@property(nonatomic, strong) NSString *maxTime;
+
+
 
 @end
 
@@ -125,6 +131,8 @@
     [self dealHeader];
     //处理footer
     [self dealFooter];
+    
+    NSLog(@"%lf ---  %f  --- \n", self.tableView.contentOffset.y, self.tableView.contentInset.top);
 }
 
 //松开scrollView
@@ -135,7 +143,7 @@
 
     if (self.tableView.contentOffset.y <= offsetY) {
         //开始刷新
-        [self headerBeginRefreshing];
+        [self firstStartBeginRefreshing];
     }
 }
 
@@ -177,8 +185,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //根据数据量显示或者隐藏
-//    self.footer.hidden = (数据量 == 0)
-    return 300;
+    self.footer.hidden = (self.AllMArray.count == 0);
+    return self.AllMArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -196,20 +204,26 @@
 #pragma mark - 网络请求
 //加载最新数据
 - (void)loadNewData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLog(@"服务器回来了");
-        
-        //结束刷新状态
-        [self headerEndRefreshing];
-        
-    });
+    
+    [YGNetManager GetEssenceAllWithType:1 maxTime:@"" completionHandler:^(YGEssenceItem *essenceAllItem, NSError *error) {
+        self.maxTime = essenceAllItem.info.maxtime;
+        [self.AllMArray removeAllObjects];
+        [self.AllMArray addObjectsFromArray:essenceAllItem.list];
+        [self.tableView reloadData];
+    }];
+    
+     //结束刷新状态
+     [self headerEndRefreshing];
 }
 //加载更多数据
 - (void)loadMoreData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLog(@"加载网络数据");
-        [self footerEndRefreshing];
-    });
+    
+    [YGNetManager GetEssenceAllWithType:1 maxTime:self.maxTime completionHandler:^(YGEssenceItem *essenceAllItem, NSError *error) {
+        [self.AllMArray addObjectsFromArray:essenceAllItem.list];
+        [self.tableView reloadData];
+    }];
+    
+    [self footerEndRefreshing];
 }
 
 
@@ -226,16 +240,21 @@
     self.headerLabel.backgroundColor = [UIColor orangeColor];
     //增加内边距
     
-    [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top)) animated:YES];
+//    [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top)) animated:YES];
     
     [UIView animateWithDuration:0.25 animations:^{
+//        self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top));
+        
         UIEdgeInsets inset = self.tableView.contentInset;
         inset.top += self.header.height;
         self.tableView.contentInset = inset;
+
     } completion:^(BOOL finished) {
         //加载最新数据
         [self loadNewData];
+        
     }];
+    
 }
 
 - (void)headerBeginRefreshing {
@@ -250,8 +269,8 @@
     
     [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top)) animated:YES];
 
-    //等到完全移到上面以后再改变内边距
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //等到完全移到上面以后再改变内边距    ----  这里是刷新要分两种状态   ----  一种 正在划时点击刷新, 另一种正常刷新
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.25 animations:^{
             UIEdgeInsets inset = self.tableView.contentInset;
             inset.top += self.header.height;
@@ -294,5 +313,14 @@
     self.footerLabel.backgroundColor = [UIColor redColor];
 }
 
+
+#pragma mark - lazy
+//精华所有数据
+- (NSMutableArray *)AllMArray {
+    if (!_AllMArray) {
+        _AllMArray = [NSMutableArray array];
+    }
+    return _AllMArray;
+}
 
 @end

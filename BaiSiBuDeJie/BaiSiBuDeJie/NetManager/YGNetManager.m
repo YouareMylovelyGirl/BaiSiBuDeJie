@@ -40,4 +40,18 @@
         !completionHandler ?: completionHandler([YGSquareItem Parse:obj], error);
     }];
 }
+
++ (id)GetEssenceAllWithType:(NSInteger)type maxTime:(NSString *)maxTime completionHandler:(void (^)(YGEssenceItem *, NSError *))completionHandler{
+    NSString *essenceAll = @"http://api.budejie.com/api/api_open.php";
+    NSDictionary *param = @{
+                            @"a": @"list",
+                            @"c": @"data",
+                            @"maxtime": maxTime,
+                            @"type": @(type)
+                            };
+    
+    return [self GET:essenceAll param:param completionHandler:^(id obj, NSError *error) {
+        !completionHandler ?: completionHandler([YGEssenceItem Parse:obj], error);
+    }];
+}
 @end
