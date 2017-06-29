@@ -114,25 +114,27 @@
 }
 
 #pragma mark - scrollViewDelegate
-//松开scrollView
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    //当scrollView的偏移量y值 <= offsetY值 代表header已经完全出现
-    CGFloat offsetY = - (self.tableView.contentInset.top + self.header.height);
-    NSLog(@"%f  -- %f --- %f ---- %f",self.tableView.contentInset.bottom,  self.header.height, offsetY, self.tableView.contentOffset.y);
-    if (self.tableView.contentOffset.y <= offsetY) {
-        //进入下拉刷新状态
-        self.headerRefreshing = YES;
-        NSLog(@"进入刷新状态");
-        self.headerLabel.text = @"正在刷新了..";
-        self.headerLabel.backgroundColor = [UIColor orangeColor];
-    }
-}
-
+//正在滚动
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     //处理header
     [self dealHeader];
     //处理footer
     [self dealFooter];
+}
+
+//松开scrollView
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    //如果正在刷新直接返回
+    if (self.headerRefreshing == YES) {
+        return;
+    }
+    //当scrollView的偏移量y值 <= offsetY值 代表header已经完全出现
+    CGFloat offsetY = - (self.tableView.contentInset.top + self.header.height);
+//    NSLog(@"%f  -- %f --- %f ---- %f",self.tableView.contentInset.bottom,  self.header.height, offsetY, self.tableView.contentOffset.y);
+    if (self.tableView.contentOffset.y <= offsetY) {
+        //开始刷新
+        [self headerBeginRefreshing];
+    }
 }
 
 //处理header
@@ -144,7 +146,7 @@
     
     //当scrollView的偏移量y值 <= offsetY值 代表header已经完全出现
     CGFloat offsetY = - (self.tableView.contentInset.top + self.header.height);
-    NSLog(@"%f  -- %f --- %f ---- %f",self.tableView.contentInset.bottom,  self.header.height, offsetY, self.tableView.contentOffset.y);
+//    NSLog(@"%f  -- %f --- %f ---- %f",self.tableView.contentInset.bottom,  self.header.height, offsetY, self.tableView.contentOffset.y);
     if (self.tableView.contentOffset.y <= offsetY) {
         self.headerLabel.text = @"松开立即刷新";
         self.headerLabel.backgroundColor = [UIColor grayColor];
@@ -168,15 +170,9 @@
     }
     
     CGFloat offsetY = self.tableView.contentSize.height + self.tableView.contentInset.bottom - self.tableView.height;
-    if (self.tableView.contentOffset.y >= offsetY) {
-        self.footerRefreshing = YES;
-        self.footerLabel.text = @"正在加载更多..";
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            NSLog(@"加载网络数据");
-            self.footerLabel.text = @"上拉加载更多..";
-            self.footerRefreshing = NO;
-        });
+    if (self.tableView.contentOffset.y >= offsetY && self.tableView.contentOffset.y > - (self.tableView.contentInset.top)) {
+        //开始footer刷新
+        [self footerBeginRefreshing];
         
     }
 }
@@ -203,7 +199,53 @@
 
 
 
+#pragma mark - header
+- (void)headerBeginRefreshing {
+    //进入下拉刷新状态
+    self.headerRefreshing = YES;
+    self.headerLabel.text = @"正在刷新了..";
+    self.headerLabel.backgroundColor = [UIColor orangeColor];
+    //增加内边距
+    [UIView animateWithDuration:0.25 animations:^{
+        UIEdgeInsets inset = self.tableView.contentInset;
+        inset.top += self.header.height;
+        self.tableView.contentInset = inset;
+    }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"服务器回来了");
+        
+        //结束刷新状态
+        [self headerEndRefreshing];
+        
+    });
+}
+- (void)headerEndRefreshing {
+    self.headerRefreshing = NO;
+    //增加内边距
+    [UIView animateWithDuration:0.25 animations:^{
+        UIEdgeInsets inset = self.tableView.contentInset;
+        inset.top -= self.header.height;
+        self.tableView.contentInset = inset;
+    }];
 
+}
+
+#pragma mark - footer
+- (void)footerBeginRefreshing {
+    
+    self.footerRefreshing = YES;
+    self.footerLabel.text = @"正在加载更多..";
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"加载网络数据");
+        [self footerEndRefreshing];
+    });
+    
+}
+- (void)footerEndRefreshing {
+    self.footerRefreshing = NO;
+    self.footerLabel.text = @"上拉加载更多..";
+}
 
 
 @end
