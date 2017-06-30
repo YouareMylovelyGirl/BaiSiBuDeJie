@@ -21,6 +21,7 @@
         !completionHandler ?: completionHandler(responseObject, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
+        !completionHandler ?: completionHandler(nil, error);
     }];
 }
 

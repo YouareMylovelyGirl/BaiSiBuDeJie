@@ -47,13 +47,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:TMTabBarItemsDidRepeatClickedNotifecation object:nil ];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonRepeatClick) name:YGTitleButtonDidRepeatClickedNotifecation object:nil ];
-
+    
     [self setupRefresh];
     
 }
 #pragma mark - 监听tabBar按钮被点击了
 - (void)tabBarButtonDidRepeatClick {
-
+    
     if (self.view.window == nil) {
         return;
     }
@@ -61,7 +61,7 @@
     if (self.tableView.scrollsToTop == NO) {
         return;
     }
-
+    
     [self headerBeginRefreshing];
     NSLog(@"%@ -- 刷新数据", self.class);
 }
@@ -103,7 +103,7 @@
     [self.header addSubview:self.headerLabel];
     
     [self.tableView addSubview:self.header];
-
+    
     
     
     //footer
@@ -116,7 +116,7 @@
     self.footerLabel.backgroundColor = [UIColor redColor];
     self.footerLabel.textAlignment = NSTextAlignmentCenter;
     [self.footer addSubview:self.footerLabel];
-
+    
     self.tableView.tableFooterView = self.footer;
     
     //第一次进来刷新
@@ -131,16 +131,14 @@
     [self dealHeader];
     //处理footer
     [self dealFooter];
-    
-    NSLog(@"%lf ---  %f  --- \n", self.tableView.contentOffset.y, self.tableView.contentInset.top);
 }
 
 //松开scrollView
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-
+    
     //当scrollView的偏移量y值 <= offsetY值 代表header已经完全出现
     CGFloat offsetY = - (self.tableView.contentInset.top + self.header.height);
-
+    
     if (self.tableView.contentOffset.y <= offsetY) {
         //开始刷新
         [self firstStartBeginRefreshing];
@@ -149,13 +147,13 @@
 
 //处理header
 - (void)dealHeader {
- 
+    
     // 如果正在下拉刷新，直接返回
     if (self.isHeaderRefreshing) return;
     
     //当scrollView的偏移量y值 <= offsetY值 代表header已经完全出现
     CGFloat offsetY = - (self.tableView.contentInset.top + self.header.height);
-
+    
     if (self.tableView.contentOffset.y <= offsetY) {
         self.headerLabel.text = @"松开立即刷新";
         self.headerLabel.backgroundColor = [UIColor grayColor];
@@ -172,7 +170,7 @@
     if (self.tableView.contentSize.height == 0) {
         return;
     }
-
+    
     CGFloat offsetY = self.tableView.contentSize.height + self.tableView.contentInset.bottom - self.tableView.height;
     if (self.tableView.contentOffset.y >= offsetY && self.tableView.contentOffset.y > - (self.tableView.contentInset.top)) {
         //开始footer刷新
@@ -206,24 +204,35 @@
 - (void)loadNewData {
     
     [YGNetManager GetEssenceAllWithType:1 maxTime:@"" completionHandler:^(YGEssenceItem *essenceAllItem, NSError *error) {
+        NSLog(@"%@", error);
+        
         self.maxTime = essenceAllItem.info.maxtime;
-        [self.AllMArray removeAllObjects];
-        [self.AllMArray addObjectsFromArray:essenceAllItem.list];
-        [self.tableView reloadData];
+        if (error) {
+            [self.view showMessage:@"网络错误"];
+        } else {
+            [self.AllMArray removeAllObjects];
+            [self.AllMArray addObjectsFromArray:essenceAllItem.list];
+            [self.tableView reloadData];
+        }
     }];
     
-     //结束刷新状态
-     [self headerEndRefreshing];
+    //结束刷新状态
+    [self headerEndRefreshing];
 }
 //加载更多数据
 - (void)loadMoreData {
     
     [YGNetManager GetEssenceAllWithType:1 maxTime:self.maxTime completionHandler:^(YGEssenceItem *essenceAllItem, NSError *error) {
-        [self.AllMArray addObjectsFromArray:essenceAllItem.list];
-        [self.tableView reloadData];
+        [self footerEndRefreshing];
+        if (error) {
+            [self.view showMessage:@"网络错误"];
+        } else {
+            [self.AllMArray addObjectsFromArray:essenceAllItem.list];
+            [self.tableView reloadData];
+        }
     }];
     
-    [self footerEndRefreshing];
+    
 }
 
 
@@ -240,20 +249,17 @@
     self.headerLabel.backgroundColor = [UIColor orangeColor];
     //增加内边距
     
-//    [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top)) animated:YES];
-    
     [UIView animateWithDuration:0.25 animations:^{
-        
         UIEdgeInsets inset = self.tableView.contentInset;
         inset.top += self.header.height;
         self.tableView.contentInset = inset;
-        //        self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top));
-
+        //大BUG, 不知道为什么滚动偏移量 一松开手就立刻加上inset.top高度, 只好在这里减去
+        self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y - inset.top);
     } completion:^(BOOL finished) {
         //加载最新数据
         [self loadNewData];
-        
     }];
+    
     
 }
 
@@ -268,7 +274,7 @@
     //增加内边距
     
     [self.tableView setContentOffset:CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top)) animated:YES];
-
+    
     //等到完全移到上面以后再改变内边距    ----  这里是刷新要分两种状态   ----  一种 正在划时点击刷新, 另一种正常刷新
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.25 animations:^{
@@ -289,7 +295,7 @@
         inset.top -= self.header.height;
         self.tableView.contentInset = inset;
     }];
-
+    
 }
 
 #pragma mark - footer

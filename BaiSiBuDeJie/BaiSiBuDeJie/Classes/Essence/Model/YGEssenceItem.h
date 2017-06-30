@@ -50,28 +50,49 @@
 
 @property (nonatomic, copy) NSString *playfcount;
 
+/**
+ 转发
+ */
 @property (nonatomic, copy) NSString *repost;
 
 @property (nonatomic, copy) NSString *bimageuri;
 
 @property (nonatomic, copy) NSString *image1;
 
+/**
+ 评论文字
+ */
 @property (nonatomic, copy) NSString *text;
 
 @property (nonatomic, copy) NSString *theme_type;
 
 @property (nonatomic, copy) NSString *hate;
 
+/**
+ 中间的图片
+ */
 @property (nonatomic, copy) NSString *image0;
 
+/**
+ 评论
+ */
 @property (nonatomic, copy) NSString *comment;
 
+/**
+ 审核通过时间
+ */
 @property (nonatomic, copy) NSString *passtime;
 
+/**
+ 顶
+ */
 @property (nonatomic, copy) NSString *ding;
 
 @property (nonatomic, copy) NSString *type;
 
+/**
+ 播放数量
+ */
 @property (nonatomic, copy) NSString *playcount;
 
 @property (nonatomic, copy) NSString *tag;
@@ -86,6 +107,9 @@
 
 @property (nonatomic, strong) NSArray *themes;
 
+/**
+ 用户名字
+ */
 @property (nonatomic, copy) NSString *name;
 
 @property (nonatomic, copy) NSString *height;
@@ -96,10 +120,19 @@
 
 @property (nonatomic, copy) NSString *bookmark;
 
+/**
+ 踩
+ */
 @property (nonatomic, copy) NSString *cai;
 
+/**
+ 用户名字
+ */
 @property (nonatomic, copy) NSString *screen_name;
 
+/**
+ 头像
+ */
 @property (nonatomic, copy) NSString *profile_image;
 
 @property (nonatomic, copy) NSString *love;
