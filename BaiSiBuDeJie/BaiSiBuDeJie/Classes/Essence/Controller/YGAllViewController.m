@@ -28,7 +28,8 @@
 @property(nonatomic, strong) NSMutableArray *AllMArray;
 /** 分页加载时最大时间 */
 @property(nonatomic, strong) NSString *maxTime;
-
+/** 记录最大偏移量 */
+@property(nonatomic, assign) CGFloat maxOffsetY;
 
 
 @end
@@ -140,6 +141,7 @@
     CGFloat offsetY = - (self.tableView.contentInset.top + self.header.height);
     
     if (self.tableView.contentOffset.y <= offsetY) {
+        self.maxOffsetY = self.tableView.contentOffset.y;
         //开始刷新
         [self firstStartBeginRefreshing];
     }
@@ -248,17 +250,20 @@
     self.headerLabel.text = @"正在刷新了..";
     self.headerLabel.backgroundColor = [UIColor orangeColor];
     //增加内边距
+    //大BUG, 不知道为什么滚动偏移量 一松开手就立刻加上inset.top高度, 只好在这里减去
+    
+    //等到完全移到上面以后再改变内边距    ----  这里是刷新要分两种状态   ----  一种 正在划时点击刷新, 另一种正常刷新
     
     [UIView animateWithDuration:0.25 animations:^{
         UIEdgeInsets inset = self.tableView.contentInset;
         inset.top += self.header.height;
         self.tableView.contentInset = inset;
-        //大BUG, 不知道为什么滚动偏移量 一松开手就立刻加上inset.top高度, 只好在这里减去
-        self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y - inset.top);
+        self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x,  - (self.header.height + self.tableView.contentInset.top));
     } completion:^(BOOL finished) {
         //加载最新数据
         [self loadNewData];
     }];
+    
     
     
 }
